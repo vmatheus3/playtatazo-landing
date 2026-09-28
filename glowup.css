@@ -135,3 +135,13 @@
   .mcard, .mcard .mpic img { transition: none; }
   .mcard:hover, .mcard:hover .mpic img { transform: none; }
 }
+
+/* Class skills (r-20260928-11): each tab shows an in-game shot of that class using a skill. The shot fills the
+   art column (a square shot, cropped a little at the sides) and stays inside it: a square figure stretched to
+   the text's height used to spill over the skills column. */
+.skillsblock .spot .art { min-width: 0; overflow: hidden; }
+.skillsblock .spot .art figure { width: 100%; height: 100%; aspect-ratio: auto; }
+.skillsblock .spot .art img { object-fit: cover; }
+@media (max-width: 1023px) {
+  .skillsblock .spot .art figure { height: auto; aspect-ratio: 1 / 1; }
+}
