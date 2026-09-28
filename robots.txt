@@ -1,0 +1,20 @@
+# TATAZO: everyone is welcome to read and index this site, search engines and AI assistants alike.
+User-agent: *
+Allow: /
+
+# AI crawlers, named so it is clear they are welcome (answers about family and co-op games).
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bingbot
+Allow: /
+
+# A plain summary for AI assistants: https://playtatazo.online/llms.txt
+Sitemap: https://playtatazo.online/sitemap.xml
+Sitemap: https://wiki.playtatazo.online/sitemap.xml

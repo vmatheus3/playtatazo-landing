@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TATAZO: Family Open-World Adventure Game | Forge your legend</title>
+<meta name="description" content="TATAZO is a fun family open-world adventure game for PC. Explore nine realms with friends, pick one of five classes, tame pets and a winged pegasus, and face Aurendrake, the Old Warden, together.">
+<link rel="canonical" href="https://playtatazo.online/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "VideoGame",
+      "@id": "https://playtatazo.online/#game",
+      "name": "TATAZO",
+      "alternateName": "TATAZO: Forge your legend",
+      "url": "https://playtatazo.online/",
+      "image": "https://playtatazo.online/og.jpg?v=2",
+      "description": "A fun family open-world adventure game for PC. Sail between nine realms, pick one of five classes, tame pets, horses and a winged pegasus, build and farm, and face Aurendrake, the Old Warden, together with friends.",
+      "genre": ["Adventure", "Open world", "Family", "Co-op"],
+      "gamePlatform": "PC",
+      "applicationCategory": "Game",
+      "playMode": ["SinglePlayer", "CoOp", "MultiPlayer"],
+      "inLanguage": "en",
+      "keywords": "family game, open world adventure, co-op game, play with friends, fun game for kids and parents, pets, pegasus, crafting, building, motion controls, PC game",
+      "sameAs": ["https://wiki.playtatazo.online/"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://playtatazo.online/#site",
+      "name": "TATAZO",
+      "url": "https://playtatazo.online/",
+      "about": { "@id": "https://playtatazo.online/#game" }
+    }
+  ]
+}
+</script>
+<meta name="theme-color" content="#173A8C">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TATAZO">
+<meta property="og:title" content="TATAZO: Forge your legend">
+<meta property="og:description" content="A family open-world adventure. Sail between faraway lands, choose your class, tame a winged pegasus, and face Aurendrake, the Old Warden, together.">
+<meta property="og:image" content="https://playtatazo.online/og.jpg?v=2">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://playtatazo.online/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TATAZO: Forge your legend">
+<meta name="twitter:description" content="A family open-world adventure. Sail between faraway lands, choose your class, tame a winged pegasus, and face Aurendrake, the Old Warden, together.">
+<meta name="twitter:image" content="https://playtatazo.online/og.jpg?v=2">
+
+<!-- Preload the hero's key art and logo so first paint of the fold has no delay. -->
+<link rel="preload" as="image" href="img/art_library_hero.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="img/logo_lockup-sm.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="font" href="fonts/cinzel.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="fonts/merriweather.woff2" type="font/woff2" crossorigin>
+
+<script>
+/* The owner's choice (2026-09-27): the site is always the white "day" theme, at any hour.
+   The night styles stay in the CSS, unused; ?theme=night previews them for design work only. */
+(function () {
+  var t = "day";
+  try { if (new URLSearchParams(location.search).get("theme") === "night") t = "night"; } catch (e) {}
+  document.documentElement.setAttribute("data-theme", t);
+})();
+</script>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="responsive.css">
+<script src="config.js" defer></script>
+<script src="newsletter.js" defer></script>
+<script src="nav.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ============================ 1. Header and hero (landing_1, Epic Gold) ============================ -->
+<header class="top"><div class="bar">
+  <a class="brand" href="#top" aria-label="TATAZO home"></a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+    <span class="nav-toggle-bars" aria-hidden="true"></span>
+  </button>
+  <nav class="nav" id="site-nav" aria-label="Main">
+    <a class="on" href="#top">The Game</a><a href="#world">The World</a><a href="#classes">Heroes</a><a href="#bosses">Legends</a><a href="#parents">Families</a>
+    <a href="#" data-config-link="WIKI_URL">Wiki</a><a href="#" data-config-link="FORUM_URL">Forum</a>
+    <a class="btn btn-steam nav-cta" href="#"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.3-9.5C1.4 7.9 3.6 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.8 1.3-1.7 2.9-2.8 4.9-2.8 3.5 0 5.7 3.4 4.4 7-1.8 4.9-9.3 9.5-9.3 9.5z" fill="currentColor"/></svg>Wishlist on Steam</a>
+  </nav>
+  <a class="btn btn-steam top-cta" href="#"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.3-9.5C1.4 7.9 3.6 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.8 1.3-1.7 2.9-2.8 4.9-2.8 3.5 0 5.7 3.4 4.4 7-1.8 4.9-9.3 9.5-9.3 9.5z" fill="currentColor"/></svg>Wishlist on Steam</a>
+</div><span class="leaves l"></span><span class="leaves r"></span></header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="veil"></div>
+  <div class="stars fade"></div>
+  <div class="moon"></div>
+  <div class="sparkles"></div>
+  <div class="hero-in">
+    <picture><source type="image/webp" srcset="img/logo_lockup-sm.webp 1x, img/logo_lockup.webp 2x"><img class="lockup" src="img/logo_lockup-sm.png" srcset="img/logo_lockup-sm.png 1x, img/logo_lockup.png 2x" alt="TATAZO: Forge your legend" decoding="async"></picture>
+    <p class="pitch">A family open-world adventure. Sail between faraway lands, choose your class, tame a winged pegasus, and face Aurendrake, the Old Warden, together.</p>
+    <div class="cta-row">
+      <a class="btn btn-steam btn-lg" href="#"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.3-9.5C1.4 7.9 3.6 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.8 1.3-1.7 2.9-2.8 4.9-2.8 3.5 0 5.7 3.4 4.4 7-1.8 4.9-9.3 9.5-9.3 9.5z" fill="currentColor"/></svg>Wishlist on Steam</a>
+      <a class="btn btn-ghost btn-lg" href="#join"><svg class="ico" viewBox="0 0 24 24"><path d="M12 3 21 12 12 21 3 12z" fill="#22C3D6" stroke="#0B7F96" stroke-width="1.5"/></svg>Follow the journey</a>
+    </div>
+    <p class="soon">Coming to PC · Launch date to be announced</p>
+  </div>
+  <span class="lbl">Key art</span>
+</section>
+
+<div class="ribbon">
+  <div><picture><source type="image/webp" srcset="img/icon_realms-sm.webp 1x, img/icon_realms.webp 2x"><img src="img/icon_realms-sm.png" srcset="img/icon_realms-sm.png 1x, img/icon_realms.png 2x" alt="Realms icon" decoding="async"></picture><p><b>9 realms</b><span>across one ocean, linked by ferries</span></p></div>
+  <div><picture><source type="image/webp" srcset="img/icon_classes-sm.webp 1x, img/icon_classes.webp 2x"><img src="img/icon_classes-sm.png" srcset="img/icon_classes-sm.png 1x, img/icon_classes.png 2x" alt="Classes icon" decoding="async"></picture><p><b>5 classes</b><span>and a wardrobe of looks for each</span></p></div>
+  <div><picture><source type="image/webp" srcset="img/icon_creatures-sm.webp 1x, img/icon_creatures.webp 2x"><img src="img/icon_creatures-sm.png" srcset="img/icon_creatures-sm.png 1x, img/icon_creatures.png 2x" alt="Creatures icon" decoding="async"></picture><p><b>15 pets</b><span>from legends told around the world</span></p></div>
+  <div><picture><source type="image/webp" srcset="img/icon_bosses-sm.webp 1x, img/icon_bosses.webp 2x"><img src="img/icon_bosses-sm.png" srcset="img/icon_bosses-sm.png 1x, img/icon_bosses.png 2x" alt="Bosses icon" decoding="async"></picture><p><b>7 wards</b><span>one ancient dragon, for seven or more friends</span></p></div>
+</div>
+
+<!-- ============================ 2. Explore the isles: the map hero (landing_2) ============================ -->
+<section class="isles" id="world">
+  <div class="stars fade"></div>
+  <div class="wrap">
+    <div>
+      <span class="kicker left">Explore the isles</span>
+      <h2>Nine realms.<br>One ocean.<br><em>Your map.</em></h2>
+      <p class="pitch">Start in a riverside village in the Riverlands, then take the ferry to snowy peaks, glowing mushroom hollows, dinosaur jungles and a volcano where dragons nest. Every shore is a new adventure for the whole family.</p>
+      <div class="cta-row">
+        <a class="btn btn-steam btn-lg" href="#"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.3-9.5C1.4 7.9 3.6 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.8 1.3-1.7 2.9-2.8 4.9-2.8 3.5 0 5.7 3.4 4.4 7-1.8 4.9-9.3 9.5-9.3 9.5z" fill="currentColor"/></svg>Wishlist on Steam</a>
+        <a class="btn btn-ghost btn-lg" href="#">See the map</a>
+      </div>
+      <div class="facts"><div><b>9</b>realms to explore</div><div><b>5</b>classes to master</div><div><b>2</b>ways to play</div></div>
+    </div>
+    <figure class="mapart"><div class="mat"><picture><source type="image/webp" srcset="img/art_post_map-sm.webp 1x, img/art_post_map.webp 2x"><img src="img/art_post_map-sm.jpg" srcset="img/art_post_map-sm.jpg 1x, img/art_post_map.jpg 2x" alt="Painted map of the isles" loading="lazy" decoding="async"></picture></div><span class="lbl">Key art</span></figure>
+  </div>
+</section>
+
+<!-- ============================ 3. Something for every explorer (landing_5) ============================ -->
+<section class="sec" id="explore"><div class="wrap">
+  <span class="kicker">Things to do together</span>
+  <h2 class="orn-h">Something for every explorer</h2>
+  <p class="sub">Little ones can wander and build. Older ones can chase bosses. Everyone meets back in the village.</p>
+  <div class="todo">
+    <article class="panel card5"><div class="pic"><picture><source type="image/webp" srcset="img/shot_village_morning_2-sm.webp 1x, img/shot_village_morning_2.webp 2x"><img src="img/shot_village_morning_2-sm.jpg" srcset="img/shot_village_morning_2-sm.jpg 1x, img/shot_village_morning_2.jpg 2x" alt="Two villagers chatting by the riverside village in the morning" style="object-position:center 55%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div>
+      <div class="txt"><span class="ic c-t"><svg class="ico" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3.2" fill="currentColor"/><circle cx="16.5" cy="8.5" r="2.7" fill="currentColor"/><path d="M2.5 19c.5-4 3-6 5.5-6s5 2 5.5 6zM12.5 19c.4-3.2 2.2-5 4-5s3.6 1.8 4 5z" fill="currentColor"/></svg></span>
+      <h3>Explore with friends</h3><p>Host a world with a password and invite the family. Fight side by side and share every reward.</p></div></article>
+    <article class="panel card5"><div class="pic"><picture><source type="image/webp" srcset="img/shot_pets_swim-sm.webp 1x, img/shot_pets_swim.webp 2x"><img src="img/shot_pets_swim-sm.jpg" srcset="img/shot_pets_swim-sm.jpg 1x, img/shot_pets_swim.jpg 2x" alt="A pet creature swimming beside its player" style="object-position:center 62%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div>
+      <div class="txt"><span class="ic c-a"><svg class="ico" viewBox="0 0 24 24"><circle cx="6" cy="9" r="2.3" fill="currentColor"/><circle cx="10" cy="5.5" r="2.3" fill="currentColor"/><circle cx="14.5" cy="5.5" r="2.3" fill="currentColor"/><circle cx="18.5" cy="9" r="2.3" fill="currentColor"/><path d="M12 11c3 0 6 4 6 6.5 0 2-2 2.5-3.2 2-1-.4-1.8-.7-2.8-.7s-1.8.3-2.8.7C8 20 6 19.5 6 17.5 6 15 9 11 12 11z" fill="currentColor"/></svg></span>
+      <h3>Pets from world myths</h3><p>A phoenix, a unicorn, a baby kraken and more: 15 pets that follow you, swim beside you and grow up with you.</p></div></article>
+    <article class="panel card5"><div class="pic"><picture><source type="image/webp" srcset="img/shot_horse_tamed-sm.webp 1x, img/shot_horse_tamed.webp 2x"><img src="img/shot_horse_tamed-sm.jpg" srcset="img/shot_horse_tamed-sm.jpg 1x, img/shot_horse_tamed.jpg 2x" alt="A tamed horse being ridden across a meadow" style="object-position:center 55%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div>
+      <div class="txt"><span class="ic c-y"><svg class="ico" viewBox="0 0 24 24"><path d="M5 20l2-7c-1-1-1.5-2.5-1-4l3-4 2 1 3-2 1 3 4 2-1 3-3-1-1 3 1 6h-2l-2-5-3 1-1 4z" fill="currentColor"/></svg></span>
+      <h3>Horses and a pegasus</h3><p>Befriend a wild horse gently, name it and ride. On clear nights, a winged pegasus might land nearby.</p></div></article>
+    <article class="panel card5"><div class="pic"><picture><source type="image/webp" srcset="img/shot_capybara-sm.webp 1x, img/shot_capybara.webp 2x"><img src="img/shot_capybara-sm.jpg" srcset="img/shot_capybara-sm.jpg 1x, img/shot_capybara.jpg 2x" alt="A capybara friend trotting beside its player" style="object-position:40% 55%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div>
+      <div class="txt"><span class="ic c-g"><svg class="ico" viewBox="0 0 24 24"><ellipse cx="12" cy="14" rx="9" ry="6" fill="currentColor"/><circle cx="18" cy="9" r="3.5" fill="currentColor"/><circle cx="19" cy="8.3" r=".9" fill="#fff"/></svg></span>
+      <h3>Capybara friends</h3><p>Make friends with a capybara and it trots along beside you. Crouch and ask it to wait, or hop on for a ride.</p></div></article>
+    <article class="panel card5"><div class="pic"><picture><source type="image/webp" srcset="img/shot_camp-sm.webp 1x, img/shot_camp.webp 2x"><img src="img/shot_camp-sm.jpg" srcset="img/shot_camp-sm.jpg 1x, img/shot_camp.jpg 2x" alt="A cosy riverside camp with a fire and tents" style="object-position:center 45%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div>
+      <div class="txt"><span class="ic c-n"><svg class="ico" viewBox="0 0 24 24"><path d="M3 11 12 4l9 7v9h-6v-5H9v5H3z" fill="currentColor"/></svg></span>
+      <h3>Build, farm and craft</h3><p>Till, plant and harvest, cook what you grow, and craft everything from a fishing rod to a house by the river.</p></div></article>
+    <article class="panel card5"><div class="pic"><picture><source type="image/webp" srcset="img/shot_deep_water-sm.webp 1x, img/shot_deep_water.webp 2x"><img src="img/shot_deep_water-sm.jpg" srcset="img/shot_deep_water-sm.jpg 1x, img/shot_deep_water.jpg 2x" alt="A diver exploring the sea floor for treasure" style="object-position:center 58%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div>
+      <div class="txt"><span class="ic c-p"><svg class="ico" viewBox="0 0 24 24"><path d="M2 15c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M2 19.5c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="3.2" fill="currentColor"/></svg></span>
+      <h3>Swim and dive</h3><p>Splash in rivers and lakes, paddle a canoe, and dive for treasure at the bottom of the sea.</p></div></article>
+  </div>
+</div></section>
+
+<!-- ============================ 4. Play together (landing_5's key-art card) ============================ -->
+<section class="sky">
+  <div class="stars fade"></div>
+  <div class="wrap together">
+    <div>
+      <span class="kicker left" style="color:var(--kicker-2)">Play together</span>
+      <h2>Big adventures,<em>better together.</em></h2>
+      <p class="lead">Host a world for your family and friends and set off as a team. Little ones can build by the river while older ones scout the next boss, and everyone meets back at the campfire.</p>
+      <ul class="ticks">
+        <li>Host a world with a password and invite the people you love.</li>
+        <li>Fight side by side, trade, and share the XP from every boss.</li>
+        <li>Bring seven or more friends to face Aurendrake, the Old Warden.</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn btn-steam btn-lg" href="#"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.3-9.5C1.4 7.9 3.6 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.8 1.3-1.7 2.9-2.8 4.9-2.8 3.5 0 5.7 3.4 4.4 7-1.8 4.9-9.3 9.5-9.3 9.5z" fill="currentColor"/></svg>Wishlist on Steam</a>
+        <a class="btn btn-ghost btn-lg" href="#parents">For parents</a>
+      </div>
+    </div>
+    <div style="position:relative">
+      <figure class="gframe art"><picture><source type="image/webp" srcset="img/art_post_coop-sm.webp 1x, img/art_post_coop.webp 2x"><img src="img/art_post_coop-sm.jpg" srcset="img/art_post_coop-sm.jpg 1x, img/art_post_coop.jpg 2x" alt="Tatazo and friends running together" loading="lazy" decoding="async"></picture><span class="lbl">Key art</span></figure>
+      <span class="sticker s1"><picture><source type="image/webp" srcset="img/icon_villagers-sm.webp 1x, img/icon_villagers.webp 2x"><img src="img/icon_villagers-sm.png" srcset="img/icon_villagers-sm.png 1x, img/icon_villagers.png 2x" alt="Villagers icon" loading="lazy" decoding="async"></picture></span>
+      <span class="sticker s2"><picture><source type="image/webp" srcset="img/icon_creatures-sm.webp 1x, img/icon_creatures.webp 2x"><img src="img/icon_creatures-sm.png" srcset="img/icon_creatures-sm.png 1x, img/icon_creatures.png 2x" alt="Creatures icon" loading="lazy" decoding="async"></picture></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 5. Classes, class showcase, Knight spotlight, wardrobe (landing_3) ============================ -->
+<section class="sec" id="classes"><div class="wrap">
+  <span class="kicker">The five classes</span>
+  <h2 class="orn-h">Every class has a teacher</h2>
+  <p class="sub">Pick a class at the Class Shrine and learn from a friend in the village. You can change your mind later.</p>
+
+  <!-- Class showcase: one big card per class, crossfading every second (script at the end of the page).
+       Pauses while hovered; no auto-advance with prefers-reduced-motion; ?class=1..5 freezes it for renders. -->
+  <div class="panel showcase" id="showcase" aria-roledescription="carousel" aria-label="The five classes">
+    <div class="stage">
+      <article class="slide on" data-cls="knight"><figure><picture><source type="image/webp" srcset="img/class_knight_nobanner-sm.webp 1x, img/class_knight_nobanner.webp 2x"><img src="img/class_knight_nobanner-sm.jpg" srcset="img/class_knight_nobanner-sm.jpg 1x, img/class_knight_nobanner.jpg 2x" alt="Tatazo as a Knight, with a crystal sword and a turtle-shell shield" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></figure>
+        <div class="txt"><span class="num">Class 1 of 5</span><h3>Knight</h3><div class="verbs">Guard · taunt · shove</div><p>Shields friends with a turtle shell and raises walls that hold the Gloom back.</p><div class="meta">Taught by <b>Tiberius the turtle</b> · fights with <b>swords</b></div></div></article>
+      <article class="slide" data-cls="mage"><figure><picture><source type="image/webp" srcset="img/class_mage_nobanner-sm.webp 1x, img/class_mage_nobanner.webp 2x"><img src="img/class_mage_nobanner-sm.jpg" srcset="img/class_mage_nobanner-sm.jpg 1x, img/class_mage_nobanner.jpg 2x" alt="Tatazo as a Mage, casting with a crystal staff" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></figure>
+        <div class="txt"><span class="num">Class 2 of 5</span><h3>Mage</h3><div class="verbs">Purify · heal · freeze</div><p>Clean-water bolts, ice bridges over the river and healing rain.</p><div class="meta">Taught by <b>Vesper the tarantula</b> · fights with <b>wands</b></div></div></article>
+      <article class="slide" data-cls="shooter"><figure><picture><source type="image/webp" srcset="img/class_shooter_nobanner-sm.webp 1x, img/class_shooter_nobanner.webp 2x"><img src="img/class_shooter_nobanner-sm.jpg" srcset="img/class_shooter_nobanner-sm.jpg 1x, img/class_shooter_nobanner.jpg 2x" alt="Tatazo as a Shooter, drawing a bow" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></figure>
+        <div class="txt"><span class="num">Class 3 of 5</span><h3>Shooter</h3><div class="verbs">Shoot · mark · plant</div><p>Seed pods that sprout reeds, quick arrows and marks on the biggest foes.</p><div class="meta">Taught by <b>Pico the parrot</b> · fights with <b>slings</b></div></div></article>
+      <article class="slide" data-cls="ninja"><figure><picture><source type="image/webp" srcset="img/class_ninja_nobanner-sm.webp 1x, img/class_ninja_nobanner.webp 2x"><img src="img/class_ninja_nobanner-sm.jpg" srcset="img/class_ninja_nobanner-sm.jpg 1x, img/class_ninja_nobanner.jpg 2x" alt="Tatazo as a Ninja, leaping with leaf blades" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></figure>
+        <div class="txt"><span class="num">Class 4 of 5</span><h3>Ninja</h3><div class="verbs">Dash · climb · dive</div><p>Blurs past foes, slips away in a smoke veil and climbs where others can't.</p><div class="meta">Taught by <b>Sable the jaguar</b> · fights with <b>leaf blades</b></div></div></article>
+      <article class="slide" data-cls="monster"><figure><picture><source type="image/webp" srcset="img/class_monster_nobanner-sm.webp 1x, img/class_monster_nobanner.webp 2x"><img src="img/class_monster_nobanner-sm.jpg" srcset="img/class_monster_nobanner-sm.jpg 1x, img/class_monster_nobanner.jpg 2x" alt="Tatazo as a Monster, with glowing stone fists" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></figure>
+        <div class="txt"><span class="num">Class 5 of 5</span><h3>Monster</h3><div class="verbs">Call · stomp · dig</div><p>Calls river critters to help, rakes with claws and can bring a second pet.</p><div class="meta">Taught by <b>Goliath the crab</b> · fights with <b>claws</b></div></div></article>
+    </div>
+    <div class="picker" role="tablist" aria-label="Choose a class">
+      <button type="button" role="tab" aria-selected="true" aria-label="Knight"><picture><source type="image/webp" srcset="img/emblem_knight-sm.webp 1x, img/emblem_knight.webp 2x"><img src="img/emblem_knight-sm.png" srcset="img/emblem_knight-sm.png 1x, img/emblem_knight.png 2x" alt="Knight class emblem" loading="lazy" decoding="async"></picture><span>Knight</span></button>
+      <button type="button" role="tab" aria-label="Mage"><picture><source type="image/webp" srcset="img/emblem_mage-sm.webp 1x, img/emblem_mage.webp 2x"><img src="img/emblem_mage-sm.png" srcset="img/emblem_mage-sm.png 1x, img/emblem_mage.png 2x" alt="Mage class emblem" loading="lazy" decoding="async"></picture><span>Mage</span></button>
+      <button type="button" role="tab" aria-label="Shooter"><picture><source type="image/webp" srcset="img/emblem_shooter-sm.webp 1x, img/emblem_shooter.webp 2x"><img src="img/emblem_shooter-sm.png" srcset="img/emblem_shooter-sm.png 1x, img/emblem_shooter.png 2x" alt="Shooter class emblem" loading="lazy" decoding="async"></picture><span>Shooter</span></button>
+      <button type="button" role="tab" aria-label="Ninja"><picture><source type="image/webp" srcset="img/emblem_ninja-sm.webp 1x, img/emblem_ninja.webp 2x"><img src="img/emblem_ninja-sm.png" srcset="img/emblem_ninja-sm.png 1x, img/emblem_ninja.png 2x" alt="Ninja class emblem" loading="lazy" decoding="async"></picture><span>Ninja</span></button>
+      <button type="button" role="tab" aria-label="Monster"><picture><source type="image/webp" srcset="img/emblem_monster-sm.webp 1x, img/emblem_monster.webp 2x"><img src="img/emblem_monster-sm.png" srcset="img/emblem_monster-sm.png 1x, img/emblem_monster.png 2x" alt="Monster class emblem" loading="lazy" decoding="async"></picture><span>Monster</span></button>
+    </div>
+  </div>
+
+  <div class="codex">
+    <article class="panel cls"><picture><source type="image/webp" srcset="img/emblem_knight-sm.webp 1x, img/emblem_knight.webp 2x"><img class="em" src="img/emblem_knight-sm.png" srcset="img/emblem_knight-sm.png 1x, img/emblem_knight.png 2x" alt="Knight class emblem" loading="lazy" decoding="async"></picture><h3>Knight</h3><div class="verbs">Guard · taunt · shove</div>
+      <p>Shields friends with a turtle shell and raises walls that hold the Gloom back.</p>
+      <div class="meta">Taught by <b>Tiberius the turtle</b><br>Fights with <b>swords</b></div></article>
+    <article class="panel cls"><picture><source type="image/webp" srcset="img/emblem_mage-sm.webp 1x, img/emblem_mage.webp 2x"><img class="em" src="img/emblem_mage-sm.png" srcset="img/emblem_mage-sm.png 1x, img/emblem_mage.png 2x" alt="Mage class emblem" loading="lazy" decoding="async"></picture><h3>Mage</h3><div class="verbs">Purify · heal · freeze</div>
+      <p>Clean-water bolts, ice bridges over the river and healing rain.</p>
+      <div class="meta">Taught by <b>Vesper the tarantula</b><br>Fights with <b>wands</b></div></article>
+    <article class="panel cls"><picture><source type="image/webp" srcset="img/emblem_shooter-sm.webp 1x, img/emblem_shooter.webp 2x"><img class="em" src="img/emblem_shooter-sm.png" srcset="img/emblem_shooter-sm.png 1x, img/emblem_shooter.png 2x" alt="Shooter class emblem" loading="lazy" decoding="async"></picture><h3>Shooter</h3><div class="verbs">Shoot · mark · plant</div>
+      <p>Seed pods that sprout reeds, quick arrows and marks on the biggest foes.</p>
+      <div class="meta">Taught by <b>Pico the parrot</b><br>Fights with <b>slings</b></div></article>
+    <article class="panel cls"><picture><source type="image/webp" srcset="img/emblem_ninja-sm.webp 1x, img/emblem_ninja.webp 2x"><img class="em" src="img/emblem_ninja-sm.png" srcset="img/emblem_ninja-sm.png 1x, img/emblem_ninja.png 2x" alt="Ninja class emblem" loading="lazy" decoding="async"></picture><h3>Ninja</h3><div class="verbs">Dash · climb · dive</div>
+      <p>Blurs past foes, slips away in a smoke veil and climbs where others can't.</p>
+      <div class="meta">Taught by <b>Sable the jaguar</b><br>Fights with <b>leaf blades</b></div></article>
+    <article class="panel cls"><picture><source type="image/webp" srcset="img/emblem_monster-sm.webp 1x, img/emblem_monster.webp 2x"><img class="em" src="img/emblem_monster-sm.png" srcset="img/emblem_monster-sm.png 1x, img/emblem_monster.png 2x" alt="Monster class emblem" loading="lazy" decoding="async"></picture><h3>Monster</h3><div class="verbs">Call · stomp · dig</div>
+      <p>Calls river critters to help, rakes with claws and can bring a second pet.</p>
+      <div class="meta">Taught by <b>Goliath the crab</b><br>Fights with <b>claws</b></div></article>
+  </div>
+
+  <div class="divider sec-break"></div>
+
+  <span class="kicker">Class skills</span>
+  <h2 class="orn-h">Every class, every skill</h2>
+  <!-- Class skills: one tab per class, the Knight's exact card design underneath. Swaps with a quick
+       crossfade (script at the end of the page); does not auto-advance, so people have time to read.
+       Clicking a class in the showcase above also opens its tab here. ?skills=1..5 opens a tab with no
+       fade, for renders. Keyboard: left/right between tabs, Home/End to the first/last. -->
+  <div class="skillsblock" id="skills">
+    <div class="tabs" role="tablist" aria-label="Choose a class's skills">
+      <button type="button" role="tab" id="skill-tab-knight" aria-controls="skill-panel-knight" aria-selected="true" tabindex="0" data-cls="knight"><picture><source type="image/webp" srcset="img/emblem_knight-sm.webp 1x, img/emblem_knight.webp 2x"><img src="img/emblem_knight-sm.png" srcset="img/emblem_knight-sm.png 1x, img/emblem_knight.png 2x" alt="Knight class emblem" loading="lazy" decoding="async"></picture>Knight</button>
+      <button type="button" role="tab" id="skill-tab-mage" aria-controls="skill-panel-mage" aria-selected="false" tabindex="-1" data-cls="mage"><picture><source type="image/webp" srcset="img/emblem_mage-sm.webp 1x, img/emblem_mage.webp 2x"><img src="img/emblem_mage-sm.png" srcset="img/emblem_mage-sm.png 1x, img/emblem_mage.png 2x" alt="Mage class emblem" loading="lazy" decoding="async"></picture>Mage</button>
+      <button type="button" role="tab" id="skill-tab-shooter" aria-controls="skill-panel-shooter" aria-selected="false" tabindex="-1" data-cls="shooter"><picture><source type="image/webp" srcset="img/emblem_shooter-sm.webp 1x, img/emblem_shooter.webp 2x"><img src="img/emblem_shooter-sm.png" srcset="img/emblem_shooter-sm.png 1x, img/emblem_shooter.png 2x" alt="Shooter class emblem" loading="lazy" decoding="async"></picture>Shooter</button>
+      <button type="button" role="tab" id="skill-tab-ninja" aria-controls="skill-panel-ninja" aria-selected="false" tabindex="-1" data-cls="ninja"><picture><source type="image/webp" srcset="img/emblem_ninja-sm.webp 1x, img/emblem_ninja.webp 2x"><img src="img/emblem_ninja-sm.png" srcset="img/emblem_ninja-sm.png 1x, img/emblem_ninja.png 2x" alt="Ninja class emblem" loading="lazy" decoding="async"></picture>Ninja</button>
+      <button type="button" role="tab" id="skill-tab-monster" aria-controls="skill-panel-monster" aria-selected="false" tabindex="-1" data-cls="monster"><picture><source type="image/webp" srcset="img/emblem_monster-sm.webp 1x, img/emblem_monster.webp 2x"><img src="img/emblem_monster-sm.png" srcset="img/emblem_monster-sm.png 1x, img/emblem_monster.png 2x" alt="Monster class emblem" loading="lazy" decoding="async"></picture>Monster</button>
+    </div>
+    <div class="panels">
+      <article class="panel spot on" role="tabpanel" id="skill-panel-knight" aria-labelledby="skill-tab-knight" data-cls="knight">
+        <div class="art"><figure><picture><source type="image/webp" srcset="img/class_knight_nobanner-sm.webp 1x, img/class_knight_nobanner.webp 2x"><img src="img/class_knight_nobanner-sm.jpg" srcset="img/class_knight_nobanner-sm.jpg 1x, img/class_knight_nobanner.jpg 2x" alt="The Knight" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></figure></div>
+        <div class="body">
+          <h3>Knight</h3>
+          <p class="role">Guardian of the isles · taught by Tiberius</p>
+          <div class="stats chips"><span class="chip">Stands in front</span><span class="chip">Protects friends</span><span class="chip">Swords and shell shields</span></div>
+          <div class="ab">
+            <div><b>Shell Guard</b><span>Raise your shell: a shield soaks hits for you and one friend, and nearby creatures come for you instead.</span></div>
+            <div><b>Shoulder Charge</b><span>Lower your head and charge: everything in the way is bowled back.</span></div>
+            <div><b>Coffer Wall</b><span>Drive a wall of logs and clay into the ground. No creature gets through.</span></div>
+            <div class="cap"><b>Aegis of the River</b><span>The capstone: raise a great dome of river-gold that shelters everyone inside.</span></div>
+          </div>
+          <div class="gframe shot"><picture><source type="image/webp" srcset="img/shot_knight_guard-sm.webp 1x, img/shot_knight_guard.webp 2x"><img src="img/shot_knight_guard-sm.jpg" srcset="img/shot_knight_guard-sm.jpg 1x, img/shot_knight_guard.jpg 2x" alt="Aegis of the River in action, a golden dome sheltering the party" style="object-position:center 45%" loading="lazy" decoding="async"></picture><span class="lbl shot tl">In-game screenshot · Aegis of the River</span></div>
+        </div>
+      </article>
+      <article class="panel spot" role="tabpanel" id="skill-panel-mage" aria-labelledby="skill-tab-mage" aria-hidden="true" data-cls="mage">
+        <div class="art"><figure><picture><source type="image/webp" srcset="img/class_mage_nobanner-sm.webp 1x, img/class_mage_nobanner.webp 2x"><img src="img/class_mage_nobanner-sm.jpg" srcset="img/class_mage_nobanner-sm.jpg 1x, img/class_mage_nobanner.jpg 2x" alt="The Mage" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></figure></div>
+        <div class="body">
+          <h3>Mage</h3>
+          <p class="role">Healer of the isles · taught by Vesper</p>
+          <div class="stats chips"><span class="chip">Fights from range</span><span class="chip">Heals and purifies</span><span class="chip">Wands and clean water</span></div>
+          <div class="ab">
+            <div><b>Clear Drop</b><span>A bolt of clean water: the Gloom hates it, and it lightly heals any friend it splashes.</span></div>
+            <div><b>Bubble Ward</b><span>Blow a shimmering bubble that soaks hits around you for a while.</span></div>
+            <div><b>Frost Bridge</b><span>Freeze a strip of water into an ice bridge you and friends can cross.</span></div>
+            <div class="cap"><b>Moonwell</b><span>The capstone: call up a moonlit pool that heals and speeds everyone standing in it.</span></div>
+          </div>
+          <div class="gframe shot"><picture><source type="image/webp" srcset="img/shot_mage_moonwell-sm.webp 1x, img/shot_mage_moonwell.webp 2x"><img src="img/shot_mage_moonwell-sm.jpg" srcset="img/shot_mage_moonwell-sm.jpg 1x, img/shot_mage_moonwell.jpg 2x" alt="Moonwell in action, a healing pool of moonlit water" style="object-position:center 45%" loading="lazy" decoding="async"></picture><span class="lbl shot tl">In-game screenshot · Moonwell</span></div>
+        </div>
+      </article>
+      <article class="panel spot" role="tabpanel" id="skill-panel-shooter" aria-labelledby="skill-tab-shooter" aria-hidden="true" data-cls="shooter">
+        <div class="art"><figure><picture><source type="image/webp" srcset="img/class_shooter_nobanner-sm.webp 1x, img/class_shooter_nobanner.webp 2x"><img src="img/class_shooter_nobanner-sm.jpg" srcset="img/class_shooter_nobanner-sm.jpg 1x, img/class_shooter_nobanner.jpg 2x" alt="The Shooter" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></figure></div>
+        <div class="body">
+          <h3>Shooter</h3>
+          <p class="role">Marksman of the isles · taught by Pico</p>
+          <div class="stats chips"><span class="chip">Strikes from afar</span><span class="chip">Marks the biggest foes</span><span class="chip">Slings and quick arrows</span></div>
+          <div class="ab">
+            <div><b>Seed Popper</b><span>Pop a seed pod that bursts on hit and sprouts reeds in wet ground.</span></div>
+            <div><b>Quick Nock</b><span>Snap two arrows off one after the other, quick as a wingbeat.</span></div>
+            <div><b>Spotter's Mark</b><span>Tag a creature so everyone hits it harder.</span></div>
+            <div class="cap"><b>Hunter's Eye</b><span>The capstone: your next shots always find their mark, and friends share the eye too.</span></div>
+          </div>
+          <div class="gframe shot"><picture><source type="image/webp" srcset="img/shot_shooter_eye-sm.webp 1x, img/shot_shooter_eye.webp 2x"><img src="img/shot_shooter_eye-sm.jpg" srcset="img/shot_shooter_eye-sm.jpg 1x, img/shot_shooter_eye.jpg 2x" alt="Hunter's Eye in action, a glowing ring around the target" style="object-position:center 45%" loading="lazy" decoding="async"></picture><span class="lbl shot tl">In-game screenshot · Hunter's Eye</span></div>
+        </div>
+      </article>
+      <article class="panel spot" role="tabpanel" id="skill-panel-ninja" aria-labelledby="skill-tab-ninja" aria-hidden="true" data-cls="ninja">
+        <div class="art"><figure><picture><source type="image/webp" srcset="img/class_ninja_nobanner-sm.webp 1x, img/class_ninja_nobanner.webp 2x"><img src="img/class_ninja_nobanner-sm.jpg" srcset="img/class_ninja_nobanner-sm.jpg 1x, img/class_ninja_nobanner.jpg 2x" alt="The Ninja" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></figure></div>
+        <div class="body">
+          <h3>Ninja</h3>
+          <p class="role">Shadow of the isles · taught by Sable</p>
+          <div class="stats chips"><span class="chip">Strikes fast up close</span><span class="chip">Slips away unseen</span><span class="chip">Leaf blades</span></div>
+          <div class="ab">
+            <div><b>Shadow Dash</b><span>Dash through everything in a blur; catch a small creature from behind and it's cleansed at once.</span></div>
+            <div><b>Smoke Veil</b><span>Drop a smoke cloud that hides you and leaves creatures stumbling half blind.</span></div>
+            <div><b>Canopy Climb</b><span>Spring up like a jaguar for a great leap to ledges and cliff tops.</span></div>
+            <div class="cap"><b>One Inch Punch</b><span>The capstone: one slow blow that no armour stops, and it leaves the target wide open.</span></div>
+          </div>
+          <div class="gframe shot"><picture><source type="image/webp" srcset="img/shot_ninja_veil-sm.webp 1x, img/shot_ninja_veil.webp 2x"><img src="img/shot_ninja_veil-sm.jpg" srcset="img/shot_ninja_veil-sm.jpg 1x, img/shot_ninja_veil.jpg 2x" alt="Smoke Veil in action, a cloud hiding the Ninja" style="object-position:center 45%" loading="lazy" decoding="async"></picture><span class="lbl shot tl">In-game screenshot · Smoke Veil</span></div>
+        </div>
+      </article>
+      <article class="panel spot" role="tabpanel" id="skill-panel-monster" aria-labelledby="skill-tab-monster" aria-hidden="true" data-cls="monster">
+        <div class="art"><figure><picture><source type="image/webp" srcset="img/class_monster_nobanner-sm.webp 1x, img/class_monster_nobanner.webp 2x"><img src="img/class_monster_nobanner-sm.jpg" srcset="img/class_monster_nobanner-sm.jpg 1x, img/class_monster_nobanner.jpg 2x" alt="The Monster" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></figure></div>
+        <div class="body">
+          <h3>Monster</h3>
+          <p class="role">Brawler of the isles · taught by Goliath</p>
+          <div class="stats chips"><span class="chip">Brawls up close</span><span class="chip">Calls river critters</span><span class="chip">Claws and stone fists</span></div>
+          <div class="ab">
+            <div><b>Critter Call</b><span>Call a river critter you helped restore to fight the Gloom beside you.</span></div>
+            <div><b>Claw Swipe</b><span>Rear up and rake both claws in a wide sweep.</span></div>
+            <div><b>Wild Form</b><span>Become a round river beast: tougher, hits hard, digs fast.</span></div>
+            <div class="cap"><b>Primal Surge</b><span>The capstone: roar, and you and nearby friends become river beasts together.</span></div>
+          </div>
+          <div class="gframe shot"><picture><source type="image/webp" srcset="img/shot_monster_surge-sm.webp 1x, img/shot_monster_surge.webp 2x"><img src="img/shot_monster_surge-sm.jpg" srcset="img/shot_monster_surge-sm.jpg 1x, img/shot_monster_surge.jpg 2x" alt="Primal Surge in action, friends turning into river beasts" style="object-position:center 45%" loading="lazy" decoding="async"></picture><span class="lbl shot tl">In-game screenshot · Primal Surge</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec bg-alt"><div class="wrap">
+  <span class="kicker">The wardrobe</span>
+  <h2 class="orn-h">Change your look</h2>
+  <p class="sub">Sun-gold armour, storm robes, moonflower ninja wraps, lighthouse-keeper coats. Every class has looks to earn and wear, and Tatazo can be a boy or a girl gator.</p>
+  <div class="wardrobe">
+    <figure><picture><source type="image/webp" srcset="img/skin_knight_sun-sm.webp 1x, img/skin_knight_sun.webp 2x"><img src="img/skin_knight_sun-sm.png" srcset="img/skin_knight_sun-sm.png 1x, img/skin_knight_sun.png 2x" alt="Sun-gold Knight armour" loading="lazy" decoding="async"></picture></figure>
+    <figure><picture><source type="image/webp" srcset="img/skin_mage_aurora-sm.webp 1x, img/skin_mage_aurora.webp 2x"><img src="img/skin_mage_aurora-sm.png" srcset="img/skin_mage_aurora-sm.png 1x, img/skin_mage_aurora.png 2x" alt="Aurora Mage robes" loading="lazy" decoding="async"></picture></figure>
+    <figure><picture><source type="image/webp" srcset="img/skin_ninja_crimson-sm.webp 1x, img/skin_ninja_crimson.webp 2x"><img src="img/skin_ninja_crimson-sm.png" srcset="img/skin_ninja_crimson-sm.png 1x, img/skin_ninja_crimson.png 2x" alt="Crimson Ninja wraps" loading="lazy" decoding="async"></picture></figure>
+    <figure><picture><source type="image/webp" srcset="img/skin_shooter_explorer-sm.webp 1x, img/skin_shooter_explorer.webp 2x"><img src="img/skin_shooter_explorer-sm.png" srcset="img/skin_shooter_explorer-sm.png 1x, img/skin_shooter_explorer.png 2x" alt="Explorer Shooter gear" loading="lazy" decoding="async"></picture></figure>
+    <figure><picture><source type="image/webp" srcset="img/skin_monster_magma-sm.webp 1x, img/skin_monster_magma.webp 2x"><img src="img/skin_monster_magma-sm.png" srcset="img/skin_monster_magma-sm.png 1x, img/skin_monster_magma.png 2x" alt="Magma Monster look" loading="lazy" decoding="async"></picture></figure>
+    <figure><picture><source type="image/webp" srcset="img/skin_knight_thunder-sm.webp 1x, img/skin_knight_thunder.webp 2x"><img src="img/skin_knight_thunder-sm.png" srcset="img/skin_knight_thunder-sm.png 1x, img/skin_knight_thunder.png 2x" alt="Storm-thunder Knight armour" loading="lazy" decoding="async"></picture></figure>
+    <figure><picture><source type="image/webp" srcset="img/skin_mage_storm-sm.webp 1x, img/skin_mage_storm.webp 2x"><img src="img/skin_mage_storm-sm.png" srcset="img/skin_mage_storm-sm.png 1x, img/skin_mage_storm.png 2x" alt="Storm Mage robes" loading="lazy" decoding="async"></picture></figure>
+    <figure><picture><source type="image/webp" srcset="img/skin_ninja_moonflower-sm.webp 1x, img/skin_ninja_moonflower.webp 2x"><img src="img/skin_ninja_moonflower-sm.png" srcset="img/skin_ninja_moonflower-sm.png 1x, img/skin_ninja_moonflower.png 2x" alt="Moonflower Ninja wraps" loading="lazy" decoding="async"></picture></figure>
+    <figure><picture><source type="image/webp" srcset="img/skin_shooter_lighthouse-sm.webp 1x, img/skin_shooter_lighthouse.webp 2x"><img src="img/skin_shooter_lighthouse-sm.png" srcset="img/skin_shooter_lighthouse-sm.png 1x, img/skin_shooter_lighthouse.png 2x" alt="Lighthouse-keeper Shooter coat" loading="lazy" decoding="async"></picture></figure>
+    <figure><picture><source type="image/webp" srcset="img/skin_monster_coral-sm.webp 1x, img/skin_monster_coral.webp 2x"><img src="img/skin_monster_coral-sm.png" srcset="img/skin_monster_coral-sm.png 1x, img/skin_monster_coral.png 2x" alt="Coral Monster look" loading="lazy" decoding="async"></picture></figure>
+    <figure><picture><source type="image/webp" srcset="img/skin_knight_tide-sm.webp 1x, img/skin_knight_tide.webp 2x"><img src="img/skin_knight_tide-sm.png" srcset="img/skin_knight_tide-sm.png 1x, img/skin_knight_tide.png 2x" alt="Tide-blue Knight armour" loading="lazy" decoding="async"></picture></figure>
+    <figure><picture><source type="image/webp" srcset="img/skin_mage_ember-sm.webp 1x, img/skin_mage_ember.webp 2x"><img src="img/skin_mage_ember-sm.png" srcset="img/skin_mage_ember-sm.png 1x, img/skin_mage_ember.png 2x" alt="Ember Mage robes" loading="lazy" decoding="async"></picture></figure>
+    <figure><picture><source type="image/webp" srcset="img/skin_ninja_orchid-sm.webp 1x, img/skin_ninja_orchid.webp 2x"><img src="img/skin_ninja_orchid-sm.png" srcset="img/skin_ninja_orchid-sm.png 1x, img/skin_ninja_orchid.png 2x" alt="Orchid Ninja wraps" loading="lazy" decoding="async"></picture></figure>
+    <figure><picture><source type="image/webp" srcset="img/skin_shooter_goldenhour-sm.webp 1x, img/skin_shooter_goldenhour.webp 2x"><img src="img/skin_shooter_goldenhour-sm.png" srcset="img/skin_shooter_goldenhour-sm.png 1x, img/skin_shooter_goldenhour.png 2x" alt="Golden-hour Shooter gear" loading="lazy" decoding="async"></picture></figure>
+    <figure><picture><source type="image/webp" srcset="img/skin_monster_glacier-sm.webp 1x, img/skin_monster_glacier.webp 2x"><img src="img/skin_monster_glacier-sm.png" srcset="img/skin_monster_glacier-sm.png 1x, img/skin_monster_glacier.png 2x" alt="Glacier Monster look" loading="lazy" decoding="async"></picture></figure>
+    <figure class="more"><div>And many more<small>to find on your journey</small></div></figure>
+  </div>
+  <div class="mini-lbl"><span class="lbl shot">In-game models, rendered by the game</span></div>
+</div></section>
+
+<!-- ============================ 6. Realm bosses (landing_4) ============================ -->
+<section class="sec" id="bosses"><div class="wrap">
+  <span class="kicker">Champions of every land</span>
+  <h2 class="orn-h">Realm bosses</h2>
+  <p class="sub">Every land has a champion of its own, rising at a lair far from the harbour. Calm it, claim its trophy, and it returns a game day later.</p>
+  <div class="bosses">
+    <article class="panel boss"><div class="pic"><picture><source type="image/webp" srcset="img/portrait_goliath-sm.webp 1x, img/portrait_goliath.webp 2x"><img src="img/portrait_goliath-sm.jpg" srcset="img/portrait_goliath-sm.jpg 1x, img/portrait_goliath.jpg 2x" alt="Goliath, the Riverlands realm boss" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></div><div class="body"><h3>Goliath</h3><div class="land">Riverlands</div><div class="weak">Weak to <em>energy</em><em>holy</em></div></div></article>
+    <article class="panel boss"><div class="pic"><picture><source type="image/webp" srcset="img/portrait_thornwood_elder-sm.webp 1x, img/portrait_thornwood_elder.webp 2x"><img src="img/portrait_thornwood_elder-sm.jpg" srcset="img/portrait_thornwood_elder-sm.jpg 1x, img/portrait_thornwood_elder.jpg 2x" alt="Thornwood the Elder, the Autumn Woods realm boss" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></div><div class="body"><h3>Thornwood the Elder</h3><div class="land">Autumn Woods</div><div class="weak">Weak to <em>fire</em></div></div></article>
+    <article class="panel boss"><div class="pic"><picture><source type="image/webp" srcset="img/portrait_queen_morel-sm.webp 1x, img/portrait_queen_morel.webp 2x"><img src="img/portrait_queen_morel-sm.jpg" srcset="img/portrait_queen_morel-sm.jpg 1x, img/portrait_queen_morel.jpg 2x" alt="Queen Morel, the Glowcap Hollow realm boss" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></div><div class="body"><h3>Queen Morel</h3><div class="land">Glowcap Hollow</div><div class="weak">Weak to <em>fire</em></div></div></article>
+    <article class="panel boss"><div class="pic"><picture><source type="image/webp" srcset="img/portrait_scarjaw_tyrant-sm.webp 1x, img/portrait_scarjaw_tyrant.webp 2x"><img src="img/portrait_scarjaw_tyrant-sm.jpg" srcset="img/portrait_scarjaw_tyrant-sm.jpg 1x, img/portrait_scarjaw_tyrant.jpg 2x" alt="Scarjaw the Tyrant, the Primeval Isle realm boss" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></div><div class="body"><h3>Scarjaw the Tyrant</h3><div class="land">Primeval Isle</div><div class="weak">Weak to <em>energy</em><em>holy</em></div></div></article>
+    <article class="panel boss"><div class="pic"><picture><source type="image/webp" srcset="img/shot_sunscorch_desert_1-sm.webp 1x, img/shot_sunscorch_desert_1.webp 2x"><img src="img/shot_sunscorch_desert_1-sm.jpg" srcset="img/shot_sunscorch_desert_1-sm.jpg 1x, img/shot_sunscorch_desert_1.jpg 2x" alt="The Sunscorch Desert, home of The Great Sun Guardian" loading="lazy" decoding="async"></picture><span class="lbl">In-game screenshot</span></div><div class="body"><h3>The Great Sun Guardian</h3><div class="land">Sunscorch Desert</div><div class="weak">Weak to <em>energy</em><em>ice</em></div></div></article>
+    <article class="panel boss"><div class="pic"><picture><source type="image/webp" srcset="img/portrait_frostmaw-sm.webp 1x, img/portrait_frostmaw.webp 2x"><img src="img/portrait_frostmaw-sm.jpg" srcset="img/portrait_frostmaw-sm.jpg 1x, img/portrait_frostmaw.jpg 2x" alt="Frostmaw the Rime Matriarch, the Frostlands realm boss" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></div><div class="body"><h3>Frostmaw the Rime Matriarch</h3><div class="land">Frostlands</div><div class="weak">Weak to <em>fire</em><em>energy</em></div></div></article>
+    <article class="panel boss"><div class="pic"><picture><source type="image/webp" srcset="img/portrait_magmaw-sm.webp 1x, img/portrait_magmaw.webp 2x"><img src="img/portrait_magmaw-sm.jpg" srcset="img/portrait_magmaw-sm.jpg 1x, img/portrait_magmaw.jpg 2x" alt="Magmaw the Caldera King, the Ember Wastes realm boss" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></div><div class="body"><h3>Magmaw the Caldera King</h3><div class="land">Ember Wastes</div><div class="weak">Weak to <em>ice</em></div></div></article>
+    <article class="panel boss"><div class="pic"><picture><source type="image/webp" srcset="img/portrait_grave_king-sm.webp 1x, img/portrait_grave_king.webp 2x"><img src="img/portrait_grave_king-sm.jpg" srcset="img/portrait_grave_king-sm.jpg 1x, img/portrait_grave_king.jpg 2x" alt="Mortimer the Grave King, the Zombie Land realm boss" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></div><div class="body"><h3>Mortimer the Grave King</h3><div class="land">Zombie Land</div><div class="weak">Weak to <em>holy</em><em>fire</em></div></div></article>
+  </div>
+</div></section>
+
+<!-- ============================ 7. Real gameplay, no paint (landing_1) ============================ -->
+<section class="sec strip">
+  <div class="stars fade"></div>
+  <div class="wrap">
+  <span class="kicker">Straight from the game</span>
+  <h2 class="orn-h">Real gameplay, no paint</h2>
+  <p class="sub">These are unedited screenshots from the current build. The game is still growing, so things will keep getting better.</p>
+  <div class="film-wide">
+    <figure><div class="gframe"><picture><source type="image/webp" srcset="img/shot_glowcap_hollow_night_1-sm.webp 1x, img/shot_glowcap_hollow_night_1.webp 2x"><img src="img/shot_glowcap_hollow_night_1-sm.jpg" srcset="img/shot_glowcap_hollow_night_1-sm.jpg 1x, img/shot_glowcap_hollow_night_1.jpg 2x" alt="Glowing mushrooms lighting up Glowcap Hollow at night" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><figcaption>Glowcap Hollow after dark<span>Giant mushrooms glow over violet moss while snow drifts down.</span></figcaption></figure>
+    <figure><div class="gframe"><picture><source type="image/webp" srcset="img/shot_dragon_tower_1-sm.webp 1x, img/shot_dragon_tower_1.webp 2x"><img src="img/shot_dragon_tower_1-sm.jpg" srcset="img/shot_dragon_tower_1-sm.jpg 1x, img/shot_dragon_tower_1.jpg 2x" alt="The Dragon Tower rising over the horizon" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><figcaption>The Dragon Tower<span>Something with seven crowns waits at the top.</span></figcaption></figure>
+  </div>
+  <div class="film">
+    <figure><div class="gframe"><picture><source type="image/webp" srcset="img/shot_village_night_1-sm.webp 1x, img/shot_village_night_1.webp 2x"><img src="img/shot_village_night_1-sm.jpg" srcset="img/shot_village_night_1-sm.jpg 1x, img/shot_village_night_1.jpg 2x" alt="The village lit by lanterns at night" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><figcaption>The village at night<span>Lanterns, a fountain and your neighbours.</span></figcaption></figure>
+    <figure><div class="gframe"><picture><source type="image/webp" srcset="img/shot_frostlands_1-sm.webp 1x, img/shot_frostlands_1.webp 2x"><img src="img/shot_frostlands_1-sm.jpg" srcset="img/shot_frostlands_1-sm.jpg 1x, img/shot_frostlands_1.jpg 2x" alt="Snowy pines and icy slopes in the Frostlands" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><figcaption>The Frostlands<span>Snowy pines and icy slopes.</span></figcaption></figure>
+    <figure><div class="gframe"><picture><source type="image/webp" srcset="img/shot_primeval_isle_1-sm.webp 1x, img/shot_primeval_isle_1.webp 2x"><img src="img/shot_primeval_isle_1-sm.jpg" srcset="img/shot_primeval_isle_1-sm.jpg 1x, img/shot_primeval_isle_1.jpg 2x" alt="Giant ferns and dinosaurs on the Primeval Isle" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><figcaption>The Primeval Isle<span>Giant ferns and dinosaurs.</span></figcaption></figure>
+    <figure><div class="gframe"><picture><source type="image/webp" srcset="img/shot_sunscorch_desert_1-sm.webp 1x, img/shot_sunscorch_desert_1.webp 2x"><img src="img/shot_sunscorch_desert_1-sm.jpg" srcset="img/shot_sunscorch_desert_1-sm.jpg 1x, img/shot_sunscorch_desert_1.jpg 2x" alt="Cacti and dunes in the Sunscorch Desert" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><figcaption>The Sunscorch Desert<span>Cacti, dunes and a hidden sphinx.</span></figcaption></figure>
+  </div>
+</div></section>
+
+<!-- ============================ 8. From sunrise to campfire (landing_5) ============================ -->
+<section class="sec day-sec">
+  <div class="stars fade"></div>
+  <div class="wrap">
+  <span class="kicker">A day in the valley</span>
+  <h2 class="orn-h">From sunrise to campfire</h2>
+  <div class="day">
+    <article><span class="dot" style="background:#E7B53C"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+      <div class="gframe soft"><picture><source type="image/webp" srcset="img/shot_village_morning_1-sm.webp 1x, img/shot_village_morning_1.webp 2x"><img src="img/shot_village_morning_1-sm.jpg" srcset="img/shot_village_morning_1-sm.jpg 1x, img/shot_village_morning_1.jpg 2x" alt="The village waking up in the morning light" style="object-position:center 60%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><h3>Morning</h3><p>Say hello in the village, check your garden and pick a daily goal. Skipping a day is fine.</p></article>
+    <article><span class="dot" style="background:#E38B1F"><svg class="ico" viewBox="0 0 24 24"><path d="M3 18 9 8l4 6 3-4 5 8z" fill="currentColor"/></svg></span>
+      <div class="gframe soft"><picture><source type="image/webp" srcset="img/shot_riding-sm.webp 1x, img/shot_riding.webp 2x"><img src="img/shot_riding-sm.jpg" srcset="img/shot_riding-sm.jpg 1x, img/shot_riding.jpg 2x" alt="A player riding a horse in the afternoon" style="object-position:center 50%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><h3>Afternoon</h3><p>Ride out, take a ferry, or find a new place to swim.</p></article>
+    <article><span class="dot" style="background:#7D5BC4"><svg class="ico" viewBox="0 0 24 24"><path d="M4 18h16M6 14a6 6 0 0 1 12 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+      <div class="gframe soft"><picture><source type="image/webp" srcset="img/shot_festival_dusk_1-sm.webp 1x, img/shot_festival_dusk_1.webp 2x"><img src="img/shot_festival_dusk_1-sm.jpg" srcset="img/shot_festival_dusk_1-sm.jpg 1x, img/shot_festival_dusk_1.jpg 2x" alt="Lanterns lighting up a village festival at dusk" style="object-position:center 55%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><h3>Dusk</h3><p>Lanterns come on. When the village throws a festival, everyone gets cake.</p></article>
+    <article><span class="dot" style="background:#2A58B8"><svg class="ico" viewBox="0 0 24 24"><path d="M15.5 3.2A8.8 8.8 0 1 0 20.8 16 7 7 0 0 1 15.5 3.2z" fill="currentColor"/></svg></span>
+      <div class="gframe soft"><picture><source type="image/webp" srcset="img/shot_glowcap_hollow_night_1-sm.webp 1x, img/shot_glowcap_hollow_night_1.webp 2x"><img src="img/shot_glowcap_hollow_night_1-sm.jpg" srcset="img/shot_glowcap_hollow_night_1-sm.jpg 1x, img/shot_glowcap_hollow_night_1.jpg 2x" alt="Glowing mushrooms lighting up Glowcap Hollow at night" style="object-position:center 55%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><h3>Night</h3><p>Glowing mushrooms, fireflies and a good place to stop for the day.</p></article>
+  </div>
+  <div class="panel dusk-card"><span class="q">?</span><div><h3>Questions at dusk</h3><p>When the sun sets in the game, a little card can ask everyone playing a question to talk about together, like <q>What should we build next?</q></p></div></div>
+</div></section>
+
+<!-- ============================ 9. Gentle or daring (landing_5) ============================ -->
+<section class="sec"><div class="wrap">
+  <span class="kicker">Play your way</span>
+  <h2 class="orn-h">Gentle or daring, you choose</h2>
+  <div class="duo5">
+    <article class="panel capy"><div class="pic"><picture><source type="image/webp" srcset="img/shot_capybara_2-sm.webp 1x, img/shot_capybara_2.webp 2x"><img src="img/shot_capybara_2-sm.jpg" srcset="img/shot_capybara_2-sm.jpg 1x, img/shot_capybara_2.jpg 2x" alt="A player relaxing next to a capybara" style="object-position:center 55%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div>
+      <div class="txt"><h3 class="gem-h" style="font-size:27px">Friends in every corner</h3><p>Capybaras, horses and pets are all waiting to be befriended. Creatures are never hurt for good: they are cleansed, and animals simply run home.</p></div></article>
+    <div class="modes5">
+      <article class="panel mode5"><span class="tagx tag-g" style="background:#2F6B33">Explore</span><h3>Roam at your own pace</h3><p>Creatures never attack and there are no levels to grind. Perfect for younger explorers and builders.</p></article>
+      <article class="panel mode5"><span class="tagx" style="background:#E38B1F">Survival</span><h3>A world that pushes back</h3><p>Hunger, thirst, cold and heat for older players who want a challenge. The host picks which rules are on.</p></article>
+      <article class="panel mode5"><span class="tagx tag-n" style="background:#173A8C">Motion play</span><h3>Move to play</h3><p>Optional webcam motion controls turn your moves into Tatazo's. The camera picture never leaves your computer.</p></article>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============================ 10. Made with families in mind (landing_5) ============================ -->
+<section class="sec bg-alt" id="parents"><div class="wrap">
+  <div class="panel parents">
+    <div class="head">
+      <div><span class="kicker left" style="color:var(--kicker-2)">For parents and carers</span>
+        <h2>Made with families in mind</h2>
+        <p>Here is what TATAZO does to keep play kind, private and fair, and the controls grown-ups get. It is all in plain words in the family guide.</p></div>
+      <a class="btn btn-gold btn-lg" href="#">Read the family guide</a>
+    </div>
+    <div class="promise">
+      <div><span class="pi" style="background:#2F6B33"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M6 6l12 12" stroke="currentColor" stroke-width="2.4"/></svg></span><div><h3>No ads, no trackers</h3><p>No advertising and no third-party analytics, in the game or on this site.</p></div></div>
+      <div><span class="pi" style="background:#E38B1F"><svg class="ico" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="2" fill="currentColor"/><path d="M4 8l3-4h10l3 4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 5l14 14" stroke="#fff" stroke-width="2.4"/></svg></span><div><h3>No loot boxes</h3><p>Nothing is random for money, there are no timers, and coins are earned only by playing.</p></div></div>
+      <div><span class="pi" style="background:#173A8C"><svg class="ico" viewBox="0 0 24 24"><rect x="2.5" y="6" width="13" height="12" rx="3" fill="currentColor"/><path d="M15.5 10l6-3.5v11l-6-3.5z" fill="currentColor"/><path d="M6 12.5l2 2 3.5-4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span><div><h3>The webcam never leaves your PC</h3><p>Motion controls are optional and work entirely on your own computer. Camera pictures and body positions are never sent anywhere.</p></div></div>
+      <div><span class="pi" style="background:#22C3D6"><svg class="ico" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2" fill="currentColor"/><path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2.4"/></svg></span><div><h3>Controls for grown-ups</h3><p>A Family screen behind a parent PIN: daily play time, trading, friend approval, break reminders, and purchases that stay off until you turn them on.</p></div></div>
+      <div><span class="pi" style="background:#C0508A"><svg class="ico" viewBox="0 0 24 24"><path d="M4 5.5h16a1.5 1.5 0 0 1 1.5 1.5v9A1.5 1.5 0 0 1 20 17.5h-9l-5 3.5v-3.5H4A1.5 1.5 0 0 1 2.5 16V7A1.5 1.5 0 0 1 4 5.5z" fill="currentColor"/></svg></span><div><h3>No free-text chat</h3><p>Players talk with friendly preset phrases and emotes. Nobody can type a message to your child, and anyone can be muted or blocked.</p></div></div>
+      <div><span class="pi" style="background:#D9A441"><svg class="ico" viewBox="0 0 24 24"><path d="M12 2 20 5v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5z" fill="currentColor"/></svg></span><div><h3>Worlds for everyone</h3><p>Every world says who it is for. A child's profile only lists worlds for everyone, and a host can lock a world with a password.</p></div></div>
+    </div>
+    <p class="fine">No game can promise nothing will ever go wrong. The best protection is still a grown-up who plays along, so TATAZO is built to be fun to play together.</p>
+  </div>
+</div></section>
+
+<!-- ============================ 11. Gather round the campfire (landing_5) ============================ -->
+<section class="band">
+  <div class="in">
+    <span class="kicker left">Evenings on the isles</span>
+    <h2>Gather round the campfire</h2>
+    <p>Host a world, share the password with family and friends, and set off on the next adventure side by side.</p>
+    <a class="btn btn-steam btn-lg" href="#"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.3-9.5C1.4 7.9 3.6 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.8 1.3-1.7 2.9-2.8 4.9-2.8 3.5 0 5.7 3.4 4.4 7-1.8 4.9-9.3 9.5-9.3 9.5z" fill="currentColor"/></svg>Wishlist on Steam</a>
+  </div>
+  <span class="lbl">Key art</span>
+</section>
+
+<!-- ============================ 12. Launch news, wishlist and follow (landing_3), footer ============================ -->
+<section class="sec" id="join"><div class="wrap">
+  <span class="kicker">Stay in touch</span>
+  <h2 class="orn-h">Join the journey</h2>
+  <div class="panel join3" style="margin-top:48px">
+    <div class="avatar"><picture><source type="image/webp" srcset="img/art_avatar_cut-sm.webp 1x, img/art_avatar_cut.webp 2x"><img src="img/art_avatar_cut-sm.png" srcset="img/art_avatar_cut-sm.png 1x, img/art_avatar_cut.png 2x" alt="Tatazo" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></div>
+    <div class="news">
+      <span class="for">For grown-ups</span>
+      <h3>Get launch news</h3>
+      <p>Be first to hear when the heroes set out. One short email at launch, and now and then when something big arrives.</p>
+      <form id="newsletter-form" novalidate>
+        <input type="email" name="email" id="newsletter-email" placeholder="A grown-up's email address" aria-label="A grown-up's email address" autocomplete="email" required>
+        <!-- Honeypot: hidden from people, left blank by them; a filled-in value means a bot filled the form. -->
+        <div class="hp-field" aria-hidden="true"><label for="newsletter-hp">Leave this field blank</label><input type="text" id="newsletter-hp" name="company" tabindex="-1" autocomplete="off"></div>
+        <label class="consent"><input type="checkbox" id="newsletter-consent" name="consent" required>
+          <span>I'm a grown-up (16+) and I agree to get TATAZO launch news. I can unsubscribe any time. Read the <a href="privacy.html">privacy policy</a>.</span>
+        </label>
+        <button class="btn btn-gold" type="submit" id="newsletter-submit">Keep me posted</button>
+        <p class="form-msg" id="newsletter-msg" role="status" aria-live="polite"></p>
+      </form>
+      <p class="note"><svg class="ico" viewBox="0 0 24 24"><path d="M12 2 20 5v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5z" fill="currentColor"/></svg><span><b>Under 16?</b> Please ask a parent or carer to sign up for you.</span></p>
+    </div>
+    <div>
+      <h3 class="gem-h">Wishlist and follow</h3>
+      <p>Add TATAZO to your Steam wishlist, then follow along as new classes, looks and lands are shown.</p>
+      <a class="btn btn-steam btn-lg" href="#" style="margin:10px 0 28px"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.3-9.5C1.4 7.9 3.6 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.8 1.3-1.7 2.9-2.8 4.9-2.8 3.5 0 5.7 3.4 4.4 7-1.8 4.9-9.3 9.5-9.3 9.5z" fill="currentColor"/></svg>Wishlist on Steam</a>
+      <div class="social-l">
+        <span><a href="#"><svg class="ico" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="4.5" fill="currentColor"/><path d="M10 9.2 15 12l-5 2.8z" fill="#FCE7A8"/></svg></a>Videos</span>
+        <span><a href="#"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M5.5 17.5 10 12l3 3.5 2.5-2.5 3 4z" fill="currentColor"/><circle cx="16" cy="8.5" r="1.8" fill="currentColor"/></svg></a>Pictures</span>
+        <span><a href="#"><svg class="ico" viewBox="0 0 24 24"><path d="M4 5.5h16a1.5 1.5 0 0 1 1.5 1.5v9A1.5 1.5 0 0 1 20 17.5h-9l-5 3.5v-3.5H4A1.5 1.5 0 0 1 2.5 16V7A1.5 1.5 0 0 1 4 5.5z" fill="currentColor"/><circle cx="8" cy="11.5" r="1.3" fill="#FCE7A8"/><circle cx="12" cy="11.5" r="1.3" fill="#FCE7A8"/><circle cx="16" cy="11.5" r="1.3" fill="#FCE7A8"/></svg></a>Community</span>
+        <span><a href="#"><svg class="ico" viewBox="0 0 24 24"><path d="M3 10v4h3l7 5V5L6 10z" fill="currentColor"/><path d="M16 8.5c1.2 1 1.8 2.2 1.8 3.5s-.6 2.5-1.8 3.5M18.5 6c2 1.6 3 3.6 3 6s-1 4.4-3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>News</span>
+      </div>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer class="foot">
+  <div class="foot-in"><a class="foot-brand" href="#top">TATAZO</a><p class="foot-motto">Forge your legend</p>
+    <nav class="foot-links" aria-label="Footer"><a href="#" data-config-link="WIKI_URL">Wiki</a><a href="#parents">Families</a><a href="#" data-config-link="FORUM_URL">Forum</a><a href="privacy.html">Privacy</a></nav></div>
+  <p class="foot-note">Made by <b>Duck Mines Game Studio</b>. <b>TATAZO</b> is in development for PC. Pictures marked <b>Key art</b> or <b>Art</b> are painted; pictures marked <b>In-game screenshot</b> come straight from the game. This site has no ads and no trackers. Steam is a trademark of Valve Corporation.</p>
+</footer>
+<script>
+(function () {
+  var root = document.documentElement, btns = document.querySelectorAll(".theme-sw button");
+  function mark() { btns.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.set === root.dataset.theme)); }); }
+  btns.forEach(function (b) { b.addEventListener("click", function () {
+    root.setAttribute("data-theme", b.dataset.set); mark();
+    try { sessionStorage.setItem("tatazo-theme", b.dataset.set); } catch (e) {}
+  }); });
+  mark();
+  addEventListener("load", function () {
+    root.dataset.h = root.scrollHeight;
+    var sc = document.getElementById("showcase").getBoundingClientRect();   /* where the showcase sits, for crops */
+    root.dataset.showcase = [Math.round(sc.left + scrollX), Math.round(sc.top + scrollY), Math.round(sc.width), Math.round(sc.height)].join(",");
+    var sk = document.getElementById("skills").getBoundingClientRect();     /* where the class skills sit, for crops */
+    root.dataset.skills = [Math.round(sk.left + scrollX), Math.round(sk.top + scrollY), Math.round(sk.width), Math.round(sk.height)].join(",");
+  });
+})();
+/* Class skills: a tab per class over the same Knight-card layout, swapped with a quick crossfade (CSS).
+   Does not auto-advance (people need time to read). Keyboard: left/right/Home/End move between tabs and
+   select at once. ?skills=1..5 opens that tab with no fade (for renders). Exposed as window.tatazoSelectSkill
+   so the class showcase below can pick it up its picker click (kept in the same order: Knight, Mage,
+   Shooter, Ninja, Monster). */
+(function () {
+  var box = document.getElementById("skills"), tabs = box.querySelectorAll('[role="tab"]'), panels = box.querySelectorAll('[role="tabpanel"]');
+  var n = parseInt(new URLSearchParams(location.search).get("skills"), 10);
+  var frozen = n >= 1 && n <= tabs.length;
+  function select(k, focus) {
+    k = (k + tabs.length) % tabs.length;
+    tabs.forEach(function (t, j) {
+      var on = j === k;
+      t.setAttribute("aria-selected", String(on));
+      t.tabIndex = on ? 0 : -1;
+    });
+    panels.forEach(function (p, j) {
+      var on = j === k;
+      p.classList.toggle("on", on);
+      p.setAttribute("aria-hidden", String(!on));
+    });
+    if (focus) tabs[k].focus();
+  }
+  tabs.forEach(function (t, j) { t.addEventListener("click", function () { select(j); }); });
+  box.querySelector(".tabs").addEventListener("keydown", function (e) {
+    var cur = Array.prototype.indexOf.call(tabs, document.activeElement);
+    if (cur < 0) return;
+    var k = e.key === "ArrowRight" ? cur + 1 : e.key === "ArrowLeft" ? cur - 1 : e.key === "Home" ? 0 : e.key === "End" ? tabs.length - 1 : null;
+    if (k === null) return;
+    e.preventDefault();
+    select(k, true);
+  });
+  if (frozen) { box.classList.add("frozen"); select(n - 1); }
+  window.tatazoSelectSkill = select;
+})();
+/* Class showcase: next class every second, 250 ms crossfade (CSS). Pauses while hovered or focused.
+   prefers-reduced-motion: no auto-advance, only the picker. ?class=1..5 freezes it on that class (for renders).
+   Clicking a class here also opens its tab in the class skills below. */
+(function () {
+  var box = document.getElementById("showcase"), slides = box.querySelectorAll(".slide"), tabs = box.querySelectorAll(".picker button");
+  var i = 0, held = false, n = parseInt(new URLSearchParams(location.search).get("class"), 10);
+  var frozen = n >= 1 && n <= slides.length, still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function show(k) {
+    i = (k + slides.length) % slides.length;
+    slides.forEach(function (s, j) { s.classList.toggle("on", j === i); s.setAttribute("aria-hidden", String(j !== i)); });
+    tabs.forEach(function (t, j) { t.setAttribute("aria-selected", String(j === i)); });
+  }
+  tabs.forEach(function (t, j) { t.addEventListener("click", function () { show(j); if (window.tatazoSelectSkill) window.tatazoSelectSkill(j); }); });
+  ["mouseenter", "focusin"].forEach(function (e) { box.addEventListener(e, function () { held = true; }); });
+  ["mouseleave", "focusout"].forEach(function (e) { box.addEventListener(e, function () { held = false; }); });
+  if (frozen) { box.classList.add("frozen"); show(n - 1); return; }
+  show(0);
+  if (!still) setInterval(function () { if (!held && !document.hidden) show(i + 1); }, 1000);
+})();
+</script>
+</body>
+</html>
