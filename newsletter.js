@@ -17,6 +17,9 @@
     document.querySelectorAll("[data-config-link]").forEach(function (a) {
       var key = a.getAttribute("data-config-link");
       var url = cfg[key];
+      // data-config-path adds a page inside that site (e.g. the wiki's "guides/game-modes.html").
+      var path = a.getAttribute("data-config-path");
+      if (url && path) url = url.replace(/\/?$/, "/") + path;
       if (url) a.setAttribute("href", url);
     });
 

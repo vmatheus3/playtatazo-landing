@@ -13,10 +13,13 @@ TATAZO is made for families: little ones can wander and build, older players can
 - [Realms](https://wiki.playtatazo.online/realms/index.html): the nine lands you can sail to
 - [Creatures](https://wiki.playtatazo.online/creatures/index.html): creatures, what they drop and where they live
 - [Family safety](https://wiki.playtatazo.online/guides/family-safety.html): how the game keeps children safe
+- [Game modes](https://wiki.playtatazo.online/guides/game-modes.html): the six world types (Adventure, Explore, Survival, Cozy, Creative, and Hardcore for teens) and who each suits
 
 ## Good to know
 
 - Genre: family open-world adventure with co-op; solo or with friends
 - Platform: PC (Steam), coming soon
+- Controls: a game controller, or mouse and keyboard; the on-screen button hints follow the device in use
+- World types: Adventure, Explore (no levels, creatures never attack), Survival, Cozy, Creative, and Hardcore for teens
 - Themes: kindness, courage, helping others and caring for creation
 - [Privacy](https://playtatazo.online/privacy.html)

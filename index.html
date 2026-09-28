@@ -23,7 +23,7 @@
       "applicationCategory": "Game",
       "playMode": ["SinglePlayer", "CoOp", "MultiPlayer"],
       "inLanguage": "en",
-      "keywords": "family game, open world adventure, co-op game, play with friends, fun game for kids and parents, pets, pegasus, crafting, building, motion controls, PC game",
+      "keywords": "family game, open world adventure, co-op game, play with friends, fun game for kids and parents, pets, pegasus, crafting, building, play with a controller or mouse and keyboard, survival mode, peaceful explore mode, motion controls, PC game",
       "sameAs": ["https://wiki.playtatazo.online/"]
     },
     {
@@ -71,6 +71,7 @@
 </script>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="responsive.css">
+<link rel="stylesheet" href="glowup.css">
 <script src="config.js" defer></script>
 <script src="newsletter.js" defer></script>
 <script src="nav.js" defer></script>
@@ -85,7 +86,7 @@
     <span class="nav-toggle-bars" aria-hidden="true"></span>
   </button>
   <nav class="nav" id="site-nav" aria-label="Main">
-    <a class="on" href="#top">The Game</a><a href="#world">The World</a><a href="#classes">Heroes</a><a href="#bosses">Legends</a><a href="#parents">Families</a>
+    <a class="on" href="#top">The Game</a><a href="#world">The World</a><a href="#modes">Modes</a><a href="#classes">Heroes</a><a href="#bosses">Legends</a><a href="#parents">Families</a>
     <a href="#" data-config-link="WIKI_URL">Wiki</a><a href="#" data-config-link="FORUM_URL">Forum</a>
     <a class="btn btn-steam nav-cta" href="#"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.3-9.5C1.4 7.9 3.6 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.8 1.3-1.7 2.9-2.8 4.9-2.8 3.5 0 5.7 3.4 4.4 7-1.8 4.9-9.3 9.5-9.3 9.5z" fill="currentColor"/></svg>Wishlist on Steam</a>
   </nav>
@@ -117,6 +118,58 @@
   <div><picture><source type="image/webp" srcset="img/icon_bosses-sm.webp 1x, img/icon_bosses.webp 2x"><img src="img/icon_bosses-sm.png" srcset="img/icon_bosses-sm.png 1x, img/icon_bosses.png 2x" alt="Bosses icon" decoding="async"></picture><p><b>7 wards</b><span>one ancient dragon, for seven or more friends</span></p></div>
 </div>
 
+<!-- ============================ 1b. Play your way: controller or mouse and keyboard ============================ -->
+<section class="playway" id="play" aria-labelledby="playway-h">
+  <div class="wrap">
+    <div class="pw-plate">
+      <div class="pw-dev pad"><span class="halo"><picture><source type="image/webp" srcset="img/play_gamepad-sm.webp 1x, img/play_gamepad.webp 2x"><img src="img/play_gamepad-sm.png" srcset="img/play_gamepad-sm.png 1x, img/play_gamepad.png 2x" alt="A game controller" loading="lazy" decoding="async"></picture></span><b>Controller</b></div>
+      <div class="pw-mid">
+        <span class="kicker">Play your way</span>
+        <h2 id="playway-h"><span class="gold">Controller</span><span class="or" aria-label="or">or</span><span class="gold">mouse &amp; keyboard</span></h2>
+        <p>Kick back on the couch with a gamepad, or sit at the desk with mouse and keyboard. Switch whenever you like: the button hints on screen change to match what you are holding.</p>
+        <ul class="pw-facts"><li>Plug in a gamepad and play</li><li>Menus you can steer with the stick</li><li>Hints that show your buttons</li></ul>
+      </div>
+      <div class="pw-dev kb"><span class="halo"><picture><source type="image/webp" srcset="img/play_keyboard_mouse-sm.webp 1x, img/play_keyboard_mouse.webp 2x"><img src="img/play_keyboard_mouse-sm.png" srcset="img/play_keyboard_mouse-sm.png 1x, img/play_keyboard_mouse.png 2x" alt="A keyboard and a mouse" loading="lazy" decoding="async"></picture></span><b>Mouse &amp; keyboard</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 1c. Ways to play: the six world types ============================ -->
+<section class="sec modes" id="modes"><div class="wrap">
+  <span class="kicker">Ways to play</span>
+  <h2 class="orn-h">Six worlds. Pick your adventure.</h2>
+  <p class="sub">Every world is the same valley with its own rules. Choose one when you make a world, or keep a few: your gator's progress in each one stays its own.</p>
+  <div class="grid6">
+    <article class="panel mcard feature m-adventure"><div class="mpic"><picture><source type="image/webp" srcset="img/mode_adventure-sm.webp 1x, img/mode_adventure.webp 2x"><img src="img/mode_adventure-sm.jpg" srcset="img/mode_adventure-sm.jpg 1x, img/mode_adventure.jpg 2x" alt="Tatazo and two friends climbing temple steps toward a giant crab boss and a glowing treasure chest" style="object-position:center 40%" loading="lazy" decoding="async"></picture><span class="mtag">Adventure</span><span class="lbl">Art</span></div>
+      <div class="mtxt"><h3>The classic quest</h3><p>The full game. Level up, choose one of five classes, find loot and take on the realm bosses with your friends. Creatures fight back, and every victory counts.</p>
+        <ul class="mfacts"><li>Levels and classes</li><li>Realm bosses</li><li>A knockout costs a little XP</li></ul>
+        <p class="mfor"><b>Best for:</b> everyone. Not sure? Start here.</p></div></article>
+    <article class="panel mcard m-explore"><div class="mpic"><picture><source type="image/webp" srcset="img/mode_explore-sm.webp 1x, img/mode_explore.webp 2x"><img src="img/mode_explore-sm.jpg" srcset="img/mode_explore-sm.jpg 1x, img/mode_explore.jpg 2x" alt="Tatazo reading a map on a hilltop over a valley of many lands, a capybara at his side" loading="lazy" decoding="async"></picture><span class="mtag">Explore</span><span class="lbl">Art</span></div>
+      <div class="mtxt"><h3>Roam without a fight</h3><p>No levels, and creatures never attack. Craft gear others must hunt for, and fill a Discovery journal of every land.</p>
+        <ul class="mfacts"><li>No levels</li><li>Creatures never attack</li><li>Nothing lost</li></ul>
+        <p class="mfor"><b>Best for:</b> young explorers and families.</p></div></article>
+    <article class="panel mcard m-survival"><div class="mpic"><picture><source type="image/webp" srcset="img/mode_survival-sm.webp 1x, img/mode_survival.webp 2x"><img src="img/mode_survival-sm.jpg" srcset="img/mode_survival-sm.jpg 1x, img/mode_survival.jpg 2x" alt="Tatazo in a warm scarf by a campfire outside his log shelter in the snowy mountains at dusk" loading="lazy" decoding="async"></picture><span class="mtag">Survival</span><span class="lbl">Art</span></div>
+      <div class="mtxt"><h3>A world that pushes back</h3><p>Hunger, thirst, cold and heat, food that spoils and gear that wears. Light a fire, build a shelter and hold out till dawn.</p>
+        <ul class="mfacts"><li>Thirst and hunger</li><li>Cold and heat</li><li>Graves and worn gear</li></ul>
+        <p class="mfor"><b>Best for:</b> older players who love a challenge.</p></div></article>
+    <article class="panel mcard m-cozy"><div class="mpic"><picture><source type="image/webp" srcset="img/mode_cozy-sm.webp 1x, img/mode_cozy.webp 2x"><img src="img/mode_cozy-sm.jpg" srcset="img/mode_cozy-sm.jpg 1x, img/mode_cozy.jpg 2x" alt="Tatazo watering his vegetable garden beside a cottage, a capybara and a fluffy pet at his side" loading="lazy" decoding="async"></picture><span class="mtag">Cozy</span><span class="lbl">Art</span></div>
+      <div class="mtxt"><h3>Slow days by the river</h3><p>Gentle creatures that only fight back if you start it, half the damage, double XP and longer days. Farm, fish and take it easy.</p>
+        <ul class="mfacts"><li>No hunger</li><li>Double XP</li><li>Nothing lost</li></ul>
+        <p class="mfor"><b>Best for:</b> little ones and first-timers.</p></div></article>
+    <article class="panel mcard m-creative"><div class="mpic"><picture><source type="image/webp" srcset="img/mode_creative-sm.webp 1x, img/mode_creative.webp 2x"><img src="img/mode_creative-sm.jpg" srcset="img/mode_creative-sm.jpg 1x, img/mode_creative.jpg 2x" alt="Tatazo swinging a golden build hammer as walls, arches and a tower top snap into a treehouse castle" loading="lazy" decoding="async"></picture><span class="mtag">Creative</span><span class="lbl">Art</span></div>
+      <div class="mtxt"><h3>Build anything</h3><p>Nothing can hurt you, trees and rocks come down in one hit, and you can even build in the village.</p>
+        <ul class="mfacts"><li>No damage</li><li>One-hit gathering</li><li>No lava, no drowning</li></ul>
+        <p class="mfor"><b>Best for:</b> builders with a big idea.</p></div></article>
+  </div>
+  <div class="mextra" style="margin-top:24px">
+    <div class="panel mnote"><span class="pi" style="background:#C0508A"><svg class="ico" viewBox="0 0 24 24"><path d="M12 2 20 5v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5z" fill="currentColor"/></svg></span>
+      <div><h3>Hardcore, for teens</h3><p>Tougher creatures, open player battles and real stakes. Marked 13+, so a child's profile never sees these worlds.</p></div></div>
+    <div class="panel mnote"><span class="pi" style="background:#0E9CB2"><svg class="ico" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="16" cy="7" r="2.6" fill="currentColor"/><circle cx="10" cy="17" r="2.6" fill="currentColor"/></svg></span>
+      <div><h3>Mix your own</h3><p>The host can switch most rules on and off at any time: hunger, how often creatures appear, bosses that fight back, night raids and more.</p></div></div>
+  </div>
+  <div class="guide-cta"><p>Every rule, every number, and which world suits who:</p><a class="btn btn-gold btn-lg" href="https://wiki.playtatazo.online/guides/game-modes.html" data-config-link="WIKI_URL" data-config-path="guides/game-modes.html"><svg class="ico" viewBox="0 0 24 24"><path d="M4 4.5h6a2 2 0 0 1 2 2V20a2 2 0 0 0-2-2H4zM20 4.5h-6a2 2 0 0 0-2 2V20a2 2 0 0 1 2-2h6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Read the full guide to the modes</a></div>
+</div></section>
+
 <!-- ============================ 2. Explore the isles: the map hero (landing_2) ============================ -->
 <section class="isles" id="world">
   <div class="stars fade"></div>
@@ -141,22 +194,22 @@
   <h2 class="orn-h">Something for every explorer</h2>
   <p class="sub">Little ones can wander and build. Older ones can chase bosses. Everyone meets back in the village.</p>
   <div class="todo">
-    <article class="panel card5"><div class="pic"><picture><source type="image/webp" srcset="img/shot_village_morning_2-sm.webp 1x, img/shot_village_morning_2.webp 2x"><img src="img/shot_village_morning_2-sm.jpg" srcset="img/shot_village_morning_2-sm.jpg 1x, img/shot_village_morning_2.jpg 2x" alt="Two villagers chatting by the riverside village in the morning" style="object-position:center 55%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div>
+    <article class="panel card5"><div class="pic"><picture><source type="image/webp" srcset="img/play_village_noon-sm.webp 1x, img/play_village_noon.webp 2x"><img src="img/play_village_noon-sm.jpg" srcset="img/play_village_noon-sm.jpg 1x, img/play_village_noon.jpg 2x" alt="The Riverside Village at midday, where every gator starts" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div>
       <div class="txt"><span class="ic c-t"><svg class="ico" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3.2" fill="currentColor"/><circle cx="16.5" cy="8.5" r="2.7" fill="currentColor"/><path d="M2.5 19c.5-4 3-6 5.5-6s5 2 5.5 6zM12.5 19c.4-3.2 2.2-5 4-5s3.6 1.8 4 5z" fill="currentColor"/></svg></span>
       <h3>Explore with friends</h3><p>Host a world with a password and invite the family. Fight side by side and share every reward.</p></div></article>
-    <article class="panel card5"><div class="pic"><picture><source type="image/webp" srcset="img/shot_pets_swim-sm.webp 1x, img/shot_pets_swim.webp 2x"><img src="img/shot_pets_swim-sm.jpg" srcset="img/shot_pets_swim-sm.jpg 1x, img/shot_pets_swim.jpg 2x" alt="A pet creature swimming beside its player" style="object-position:center 62%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div>
+    <article class="panel card5"><div class="pic"><picture><source type="image/webp" srcset="img/play_pet_phoenix_riverlands-sm.webp 1x, img/play_pet_phoenix_riverlands.webp 2x"><img src="img/play_pet_phoenix_riverlands-sm.jpg" srcset="img/play_pet_phoenix_riverlands-sm.jpg 1x, img/play_pet_phoenix_riverlands.jpg 2x" alt="A phoenix pet with golden wings in the village square" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div>
       <div class="txt"><span class="ic c-a"><svg class="ico" viewBox="0 0 24 24"><circle cx="6" cy="9" r="2.3" fill="currentColor"/><circle cx="10" cy="5.5" r="2.3" fill="currentColor"/><circle cx="14.5" cy="5.5" r="2.3" fill="currentColor"/><circle cx="18.5" cy="9" r="2.3" fill="currentColor"/><path d="M12 11c3 0 6 4 6 6.5 0 2-2 2.5-3.2 2-1-.4-1.8-.7-2.8-.7s-1.8.3-2.8.7C8 20 6 19.5 6 17.5 6 15 9 11 12 11z" fill="currentColor"/></svg></span>
       <h3>Pets from world myths</h3><p>A phoenix, a unicorn, a baby kraken and more: 15 pets that follow you, swim beside you and grow up with you.</p></div></article>
-    <article class="panel card5"><div class="pic"><picture><source type="image/webp" srcset="img/shot_horse_tamed-sm.webp 1x, img/shot_horse_tamed.webp 2x"><img src="img/shot_horse_tamed-sm.jpg" srcset="img/shot_horse_tamed-sm.jpg 1x, img/shot_horse_tamed.jpg 2x" alt="A tamed horse being ridden across a meadow" style="object-position:center 55%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div>
+    <article class="panel card5"><div class="pic"><picture><source type="image/webp" srcset="img/play_riverlands_afternoon-sm.webp 1x, img/play_riverlands_afternoon.webp 2x"><img src="img/play_riverlands_afternoon-sm.jpg" srcset="img/play_riverlands_afternoon-sm.jpg 1x, img/play_riverlands_afternoon.jpg 2x" alt="The open Riverlands meadows, where wild horses roam" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div>
       <div class="txt"><span class="ic c-y"><svg class="ico" viewBox="0 0 24 24"><path d="M5 20l2-7c-1-1-1.5-2.5-1-4l3-4 2 1 3-2 1 3 4 2-1 3-3-1-1 3 1 6h-2l-2-5-3 1-1 4z" fill="currentColor"/></svg></span>
       <h3>Horses and a pegasus</h3><p>Befriend a wild horse gently, name it and ride. On clear nights, a winged pegasus might land nearby.</p></div></article>
-    <article class="panel card5"><div class="pic"><picture><source type="image/webp" srcset="img/shot_capybara-sm.webp 1x, img/shot_capybara.webp 2x"><img src="img/shot_capybara-sm.jpg" srcset="img/shot_capybara-sm.jpg 1x, img/shot_capybara.jpg 2x" alt="A capybara friend trotting beside its player" style="object-position:40% 55%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div>
+    <article class="panel card5"><div class="pic"><picture><source type="image/webp" srcset="img/play_triceratops_primeval-sm.webp 1x, img/play_triceratops_primeval.webp 2x"><img src="img/play_triceratops_primeval-sm.jpg" srcset="img/play_triceratops_primeval-sm.jpg 1x, img/play_triceratops_primeval.jpg 2x" alt="A friendly triceratops on the Primeval Isle" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div>
       <div class="txt"><span class="ic c-g"><svg class="ico" viewBox="0 0 24 24"><ellipse cx="12" cy="14" rx="9" ry="6" fill="currentColor"/><circle cx="18" cy="9" r="3.5" fill="currentColor"/><circle cx="19" cy="8.3" r=".9" fill="#fff"/></svg></span>
-      <h3>Capybara friends</h3><p>Make friends with a capybara and it trots along beside you. Crouch and ask it to wait, or hop on for a ride.</p></div></article>
-    <article class="panel card5"><div class="pic"><picture><source type="image/webp" srcset="img/shot_camp-sm.webp 1x, img/shot_camp.webp 2x"><img src="img/shot_camp-sm.jpg" srcset="img/shot_camp-sm.jpg 1x, img/shot_camp.jpg 2x" alt="A cosy riverside camp with a fire and tents" style="object-position:center 45%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div>
+      <h3>Creatures of every land</h3><p>Dinosaurs on the Primeval Isle, mushroom folk in Glowcap Hollow, and capybaras by the rivers that trot along beside a friend.</p></div></article>
+    <article class="panel card5"><div class="pic"><picture><source type="image/webp" srcset="img/play_town_autumn-sm.webp 1x, img/play_town_autumn.webp 2x"><img src="img/play_town_autumn-sm.jpg" srcset="img/play_town_autumn-sm.jpg 1x, img/play_town_autumn.jpg 2x" alt="Chestnutford, a town of wooden houses in the Autumn Woods" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div>
       <div class="txt"><span class="ic c-n"><svg class="ico" viewBox="0 0 24 24"><path d="M3 11 12 4l9 7v9h-6v-5H9v5H3z" fill="currentColor"/></svg></span>
       <h3>Build, farm and craft</h3><p>Till, plant and harvest, cook what you grow, and craft everything from a fishing rod to a house by the river.</p></div></article>
-    <article class="panel card5"><div class="pic"><picture><source type="image/webp" srcset="img/shot_deep_water-sm.webp 1x, img/shot_deep_water.webp 2x"><img src="img/shot_deep_water-sm.jpg" srcset="img/shot_deep_water-sm.jpg 1x, img/shot_deep_water.jpg 2x" alt="A diver exploring the sea floor for treasure" style="object-position:center 58%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div>
+    <article class="panel card5"><div class="pic"><picture><source type="image/webp" srcset="img/play_underwater-sm.webp 1x, img/play_underwater.webp 2x"><img src="img/play_underwater-sm.jpg" srcset="img/play_underwater-sm.jpg 1x, img/play_underwater.jpg 2x" alt="Swimming along the sandy bottom of a river, among waterweed" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div>
       <div class="txt"><span class="ic c-p"><svg class="ico" viewBox="0 0 24 24"><path d="M2 15c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M2 19.5c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="3.2" fill="currentColor"/></svg></span>
       <h3>Swim and dive</h3><p>Splash in rivers and lakes, paddle a canoe, and dive for treasure at the bottom of the sea.</p></div></article>
   </div>
@@ -265,7 +318,6 @@
             <div><b>Coffer Wall</b><span>Drive a wall of logs and clay into the ground. No creature gets through.</span></div>
             <div class="cap"><b>Aegis of the River</b><span>The capstone: raise a great dome of river-gold that shelters everyone inside.</span></div>
           </div>
-          <div class="gframe shot"><picture><source type="image/webp" srcset="img/shot_knight_guard-sm.webp 1x, img/shot_knight_guard.webp 2x"><img src="img/shot_knight_guard-sm.jpg" srcset="img/shot_knight_guard-sm.jpg 1x, img/shot_knight_guard.jpg 2x" alt="Aegis of the River in action, a golden dome sheltering the party" style="object-position:center 45%" loading="lazy" decoding="async"></picture><span class="lbl shot tl">In-game screenshot · Aegis of the River</span></div>
         </div>
       </article>
       <article class="panel spot" role="tabpanel" id="skill-panel-mage" aria-labelledby="skill-tab-mage" aria-hidden="true" data-cls="mage">
@@ -280,7 +332,6 @@
             <div><b>Frost Bridge</b><span>Freeze a strip of water into an ice bridge you and friends can cross.</span></div>
             <div class="cap"><b>Moonwell</b><span>The capstone: call up a moonlit pool that heals and speeds everyone standing in it.</span></div>
           </div>
-          <div class="gframe shot"><picture><source type="image/webp" srcset="img/shot_mage_moonwell-sm.webp 1x, img/shot_mage_moonwell.webp 2x"><img src="img/shot_mage_moonwell-sm.jpg" srcset="img/shot_mage_moonwell-sm.jpg 1x, img/shot_mage_moonwell.jpg 2x" alt="Moonwell in action, a healing pool of moonlit water" style="object-position:center 45%" loading="lazy" decoding="async"></picture><span class="lbl shot tl">In-game screenshot · Moonwell</span></div>
         </div>
       </article>
       <article class="panel spot" role="tabpanel" id="skill-panel-shooter" aria-labelledby="skill-tab-shooter" aria-hidden="true" data-cls="shooter">
@@ -295,7 +346,6 @@
             <div><b>Spotter's Mark</b><span>Tag a creature so everyone hits it harder.</span></div>
             <div class="cap"><b>Hunter's Eye</b><span>The capstone: your next shots always find their mark, and friends share the eye too.</span></div>
           </div>
-          <div class="gframe shot"><picture><source type="image/webp" srcset="img/shot_shooter_eye-sm.webp 1x, img/shot_shooter_eye.webp 2x"><img src="img/shot_shooter_eye-sm.jpg" srcset="img/shot_shooter_eye-sm.jpg 1x, img/shot_shooter_eye.jpg 2x" alt="Hunter's Eye in action, a glowing ring around the target" style="object-position:center 45%" loading="lazy" decoding="async"></picture><span class="lbl shot tl">In-game screenshot · Hunter's Eye</span></div>
         </div>
       </article>
       <article class="panel spot" role="tabpanel" id="skill-panel-ninja" aria-labelledby="skill-tab-ninja" aria-hidden="true" data-cls="ninja">
@@ -310,7 +360,6 @@
             <div><b>Canopy Climb</b><span>Spring up like a jaguar for a great leap to ledges and cliff tops.</span></div>
             <div class="cap"><b>One Inch Punch</b><span>The capstone: one slow blow that no armour stops, and it leaves the target wide open.</span></div>
           </div>
-          <div class="gframe shot"><picture><source type="image/webp" srcset="img/shot_ninja_veil-sm.webp 1x, img/shot_ninja_veil.webp 2x"><img src="img/shot_ninja_veil-sm.jpg" srcset="img/shot_ninja_veil-sm.jpg 1x, img/shot_ninja_veil.jpg 2x" alt="Smoke Veil in action, a cloud hiding the Ninja" style="object-position:center 45%" loading="lazy" decoding="async"></picture><span class="lbl shot tl">In-game screenshot · Smoke Veil</span></div>
         </div>
       </article>
       <article class="panel spot" role="tabpanel" id="skill-panel-monster" aria-labelledby="skill-tab-monster" aria-hidden="true" data-cls="monster">
@@ -325,7 +374,6 @@
             <div><b>Wild Form</b><span>Become a round river beast: tougher, hits hard, digs fast.</span></div>
             <div class="cap"><b>Primal Surge</b><span>The capstone: roar, and you and nearby friends become river beasts together.</span></div>
           </div>
-          <div class="gframe shot"><picture><source type="image/webp" srcset="img/shot_monster_surge-sm.webp 1x, img/shot_monster_surge.webp 2x"><img src="img/shot_monster_surge-sm.jpg" srcset="img/shot_monster_surge-sm.jpg 1x, img/shot_monster_surge.jpg 2x" alt="Primal Surge in action, friends turning into river beasts" style="object-position:center 45%" loading="lazy" decoding="async"></picture><span class="lbl shot tl">In-game screenshot · Primal Surge</span></div>
         </div>
       </article>
     </div>
@@ -367,7 +415,7 @@
     <article class="panel boss"><div class="pic"><picture><source type="image/webp" srcset="img/portrait_thornwood_elder-sm.webp 1x, img/portrait_thornwood_elder.webp 2x"><img src="img/portrait_thornwood_elder-sm.jpg" srcset="img/portrait_thornwood_elder-sm.jpg 1x, img/portrait_thornwood_elder.jpg 2x" alt="Thornwood the Elder, the Autumn Woods realm boss" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></div><div class="body"><h3>Thornwood the Elder</h3><div class="land">Autumn Woods</div><div class="weak">Weak to <em>fire</em></div></div></article>
     <article class="panel boss"><div class="pic"><picture><source type="image/webp" srcset="img/portrait_queen_morel-sm.webp 1x, img/portrait_queen_morel.webp 2x"><img src="img/portrait_queen_morel-sm.jpg" srcset="img/portrait_queen_morel-sm.jpg 1x, img/portrait_queen_morel.jpg 2x" alt="Queen Morel, the Glowcap Hollow realm boss" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></div><div class="body"><h3>Queen Morel</h3><div class="land">Glowcap Hollow</div><div class="weak">Weak to <em>fire</em></div></div></article>
     <article class="panel boss"><div class="pic"><picture><source type="image/webp" srcset="img/portrait_scarjaw_tyrant-sm.webp 1x, img/portrait_scarjaw_tyrant.webp 2x"><img src="img/portrait_scarjaw_tyrant-sm.jpg" srcset="img/portrait_scarjaw_tyrant-sm.jpg 1x, img/portrait_scarjaw_tyrant.jpg 2x" alt="Scarjaw the Tyrant, the Primeval Isle realm boss" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></div><div class="body"><h3>Scarjaw the Tyrant</h3><div class="land">Primeval Isle</div><div class="weak">Weak to <em>energy</em><em>holy</em></div></div></article>
-    <article class="panel boss"><div class="pic"><picture><source type="image/webp" srcset="img/shot_sunscorch_desert_1-sm.webp 1x, img/shot_sunscorch_desert_1.webp 2x"><img src="img/shot_sunscorch_desert_1-sm.jpg" srcset="img/shot_sunscorch_desert_1-sm.jpg 1x, img/shot_sunscorch_desert_1.jpg 2x" alt="The Sunscorch Desert, home of The Great Sun Guardian" loading="lazy" decoding="async"></picture><span class="lbl">In-game screenshot</span></div><div class="body"><h3>The Great Sun Guardian</h3><div class="land">Sunscorch Desert</div><div class="weak">Weak to <em>energy</em><em>ice</em></div></div></article>
+    <article class="panel boss"><div class="pic"><picture><source type="image/webp" srcset="img/portrait_sun_sphinx-sm.webp 1x, img/portrait_sun_sphinx.webp 2x"><img src="img/portrait_sun_sphinx-sm.jpg" srcset="img/portrait_sun_sphinx-sm.jpg 1x, img/portrait_sun_sphinx.jpg 2x" alt="The Great Sun Guardian, the Sunscorch Desert realm boss" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></div><div class="body"><h3>The Great Sun Guardian</h3><div class="land">Sunscorch Desert</div><div class="weak">Weak to <em>energy</em><em>ice</em></div></div></article>
     <article class="panel boss"><div class="pic"><picture><source type="image/webp" srcset="img/portrait_frostmaw-sm.webp 1x, img/portrait_frostmaw.webp 2x"><img src="img/portrait_frostmaw-sm.jpg" srcset="img/portrait_frostmaw-sm.jpg 1x, img/portrait_frostmaw.jpg 2x" alt="Frostmaw the Rime Matriarch, the Frostlands realm boss" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></div><div class="body"><h3>Frostmaw the Rime Matriarch</h3><div class="land">Frostlands</div><div class="weak">Weak to <em>fire</em><em>energy</em></div></div></article>
     <article class="panel boss"><div class="pic"><picture><source type="image/webp" srcset="img/portrait_magmaw-sm.webp 1x, img/portrait_magmaw.webp 2x"><img src="img/portrait_magmaw-sm.jpg" srcset="img/portrait_magmaw-sm.jpg 1x, img/portrait_magmaw.jpg 2x" alt="Magmaw the Caldera King, the Ember Wastes realm boss" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></div><div class="body"><h3>Magmaw the Caldera King</h3><div class="land">Ember Wastes</div><div class="weak">Weak to <em>ice</em></div></div></article>
     <article class="panel boss"><div class="pic"><picture><source type="image/webp" srcset="img/portrait_grave_king-sm.webp 1x, img/portrait_grave_king.webp 2x"><img src="img/portrait_grave_king-sm.jpg" srcset="img/portrait_grave_king-sm.jpg 1x, img/portrait_grave_king.jpg 2x" alt="Mortimer the Grave King, the Zombie Land realm boss" loading="lazy" decoding="async"></picture><span class="lbl">Art</span></div><div class="body"><h3>Mortimer the Grave King</h3><div class="land">Zombie Land</div><div class="weak">Weak to <em>holy</em><em>fire</em></div></div></article>
@@ -380,16 +428,16 @@
   <div class="wrap">
   <span class="kicker">Straight from the game</span>
   <h2 class="orn-h">Real gameplay, no paint</h2>
-  <p class="sub">These are unedited screenshots from the current build. The game is still growing, so things will keep getting better.</p>
+  <p class="sub">Unedited pictures from the game as it is today, with the new creatures. The game is still growing, so things will keep getting better.</p>
   <div class="film-wide">
-    <figure><div class="gframe"><picture><source type="image/webp" srcset="img/shot_glowcap_hollow_night_1-sm.webp 1x, img/shot_glowcap_hollow_night_1.webp 2x"><img src="img/shot_glowcap_hollow_night_1-sm.jpg" srcset="img/shot_glowcap_hollow_night_1-sm.jpg 1x, img/shot_glowcap_hollow_night_1.jpg 2x" alt="Glowing mushrooms lighting up Glowcap Hollow at night" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><figcaption>Glowcap Hollow after dark<span>Giant mushrooms glow over violet moss while snow drifts down.</span></figcaption></figure>
-    <figure><div class="gframe"><picture><source type="image/webp" srcset="img/shot_dragon_tower_1-sm.webp 1x, img/shot_dragon_tower_1.webp 2x"><img src="img/shot_dragon_tower_1-sm.jpg" srcset="img/shot_dragon_tower_1-sm.jpg 1x, img/shot_dragon_tower_1.jpg 2x" alt="The Dragon Tower rising over the horizon" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><figcaption>The Dragon Tower<span>Something with seven crowns waits at the top.</span></figcaption></figure>
+    <figure><div class="gframe"><picture><source type="image/webp" srcset="img/play_glowcap_night-sm.webp 1x, img/play_glowcap_night.webp 2x"><img src="img/play_glowcap_night-sm.jpg" srcset="img/play_glowcap_night-sm.jpg 1x, img/play_glowcap_night.jpg 2x" alt="Giant mushrooms in Glowcap Hollow at night" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><figcaption>Glowcap Hollow after dark<span>Giant mushrooms tower over violet moss under the stars.</span></figcaption></figure>
+    <figure><div class="gframe"><picture><source type="image/webp" srcset="img/play_tower-sm.webp 1x, img/play_tower.webp 2x"><img src="img/play_tower-sm.jpg" srcset="img/play_tower-sm.jpg 1x, img/play_tower.jpg 2x" alt="The Dragon Tower rising over the Dragonfire Isle at dusk" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><figcaption>The Dragon Tower<span>Aurendrake, the Old Warden, waits at the top.</span></figcaption></figure>
   </div>
   <div class="film">
-    <figure><div class="gframe"><picture><source type="image/webp" srcset="img/shot_village_night_1-sm.webp 1x, img/shot_village_night_1.webp 2x"><img src="img/shot_village_night_1-sm.jpg" srcset="img/shot_village_night_1-sm.jpg 1x, img/shot_village_night_1.jpg 2x" alt="The village lit by lanterns at night" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><figcaption>The village at night<span>Lanterns, a fountain and your neighbours.</span></figcaption></figure>
-    <figure><div class="gframe"><picture><source type="image/webp" srcset="img/shot_frostlands_1-sm.webp 1x, img/shot_frostlands_1.webp 2x"><img src="img/shot_frostlands_1-sm.jpg" srcset="img/shot_frostlands_1-sm.jpg 1x, img/shot_frostlands_1.jpg 2x" alt="Snowy pines and icy slopes in the Frostlands" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><figcaption>The Frostlands<span>Snowy pines and icy slopes.</span></figcaption></figure>
-    <figure><div class="gframe"><picture><source type="image/webp" srcset="img/shot_primeval_isle_1-sm.webp 1x, img/shot_primeval_isle_1.webp 2x"><img src="img/shot_primeval_isle_1-sm.jpg" srcset="img/shot_primeval_isle_1-sm.jpg 1x, img/shot_primeval_isle_1.jpg 2x" alt="Giant ferns and dinosaurs on the Primeval Isle" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><figcaption>The Primeval Isle<span>Giant ferns and dinosaurs.</span></figcaption></figure>
-    <figure><div class="gframe"><picture><source type="image/webp" srcset="img/shot_sunscorch_desert_1-sm.webp 1x, img/shot_sunscorch_desert_1.webp 2x"><img src="img/shot_sunscorch_desert_1-sm.jpg" srcset="img/shot_sunscorch_desert_1-sm.jpg 1x, img/shot_sunscorch_desert_1.jpg 2x" alt="Cacti and dunes in the Sunscorch Desert" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><figcaption>The Sunscorch Desert<span>Cacti, dunes and a hidden sphinx.</span></figcaption></figure>
+    <figure><div class="gframe"><picture><source type="image/webp" srcset="img/play_frost_wolf_frost-sm.webp 1x, img/play_frost_wolf_frost.webp 2x"><img src="img/play_frost_wolf_frost-sm.jpg" srcset="img/play_frost_wolf_frost-sm.jpg 1x, img/play_frost_wolf_frost.jpg 2x" alt="A frost wolf in the snowy Frostlands" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><figcaption>The Frostlands<span>A frost wolf on the snowy slopes.</span></figcaption></figure>
+    <figure><div class="gframe"><picture><source type="image/webp" srcset="img/play_stegosaurus_primeval-sm.webp 1x, img/play_stegosaurus_primeval.webp 2x"><img src="img/play_stegosaurus_primeval-sm.jpg" srcset="img/play_stegosaurus_primeval-sm.jpg 1x, img/play_stegosaurus_primeval.jpg 2x" alt="A stegosaurus in the jungle of the Primeval Isle" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><figcaption>The Primeval Isle<span>A stegosaurus in the ferns.</span></figcaption></figure>
+    <figure><div class="gframe"><picture><source type="image/webp" srcset="img/play_dune_scorpion_desert-sm.webp 1x, img/play_dune_scorpion_desert.webp 2x"><img src="img/play_dune_scorpion_desert-sm.jpg" srcset="img/play_dune_scorpion_desert-sm.jpg 1x, img/play_dune_scorpion_desert.jpg 2x" alt="A dune scorpion by an oasis in the Sunscorch Desert" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><figcaption>The Sunscorch Desert<span>A dune scorpion by the oasis.</span></figcaption></figure>
+    <figure><div class="gframe"><picture><source type="image/webp" srcset="img/play_magmaw_ember-sm.webp 1x, img/play_magmaw_ember.webp 2x"><img src="img/play_magmaw_ember-sm.jpg" srcset="img/play_magmaw_ember-sm.jpg 1x, img/play_magmaw_ember.jpg 2x" alt="Magmaw the Caldera King on the glowing lava of the Ember Wastes" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><figcaption>The Ember Wastes<span>Magmaw, the Caldera King, on the lava.</span></figcaption></figure>
   </div>
 </div></section>
 
@@ -401,30 +449,15 @@
   <h2 class="orn-h">From sunrise to campfire</h2>
   <div class="day">
     <article><span class="dot" style="background:#E7B53C"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
-      <div class="gframe soft"><picture><source type="image/webp" srcset="img/shot_village_morning_1-sm.webp 1x, img/shot_village_morning_1.webp 2x"><img src="img/shot_village_morning_1-sm.jpg" srcset="img/shot_village_morning_1-sm.jpg 1x, img/shot_village_morning_1.jpg 2x" alt="The village waking up in the morning light" style="object-position:center 60%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><h3>Morning</h3><p>Say hello in the village, check your garden and pick a daily goal. Skipping a day is fine.</p></article>
+      <div class="gframe soft"><picture><source type="image/webp" srcset="img/play_village_morning-sm.webp 1x, img/play_village_morning.webp 2x"><img src="img/play_village_morning-sm.jpg" srcset="img/play_village_morning-sm.jpg 1x, img/play_village_morning.jpg 2x" alt="The village waking up in the morning light" style="object-position:center 60%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><h3>Morning</h3><p>Say hello in the village, check your garden and pick a daily goal. Skipping a day is fine.</p></article>
     <article><span class="dot" style="background:#E38B1F"><svg class="ico" viewBox="0 0 24 24"><path d="M3 18 9 8l4 6 3-4 5 8z" fill="currentColor"/></svg></span>
-      <div class="gframe soft"><picture><source type="image/webp" srcset="img/shot_riding-sm.webp 1x, img/shot_riding.webp 2x"><img src="img/shot_riding-sm.jpg" srcset="img/shot_riding-sm.jpg 1x, img/shot_riding.jpg 2x" alt="A player riding a horse in the afternoon" style="object-position:center 50%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><h3>Afternoon</h3><p>Ride out, take a ferry, or find a new place to swim.</p></article>
+      <div class="gframe soft"><picture><source type="image/webp" srcset="img/play_autumn-sm.webp 1x, img/play_autumn.webp 2x"><img src="img/play_autumn-sm.jpg" srcset="img/play_autumn-sm.jpg 1x, img/play_autumn.jpg 2x" alt="Golden trees on a sunny afternoon in the Autumn Woods" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><h3>Afternoon</h3><p>Ride out, take a ferry to another land, or find a new place to swim.</p></article>
     <article><span class="dot" style="background:#7D5BC4"><svg class="ico" viewBox="0 0 24 24"><path d="M4 18h16M6 14a6 6 0 0 1 12 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
-      <div class="gframe soft"><picture><source type="image/webp" srcset="img/shot_festival_dusk_1-sm.webp 1x, img/shot_festival_dusk_1.webp 2x"><img src="img/shot_festival_dusk_1-sm.jpg" srcset="img/shot_festival_dusk_1-sm.jpg 1x, img/shot_festival_dusk_1.jpg 2x" alt="Lanterns lighting up a village festival at dusk" style="object-position:center 55%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><h3>Dusk</h3><p>Lanterns come on. When the village throws a festival, everyone gets cake.</p></article>
+      <div class="gframe soft"><picture><source type="image/webp" srcset="img/play_town_riverlands_dusk-sm.webp 1x, img/play_town_riverlands_dusk.webp 2x"><img src="img/play_town_riverlands_dusk-sm.jpg" srcset="img/play_town_riverlands_dusk-sm.jpg 1x, img/play_town_riverlands_dusk.jpg 2x" alt="Lit windows along a town path at dusk" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><h3>Dusk</h3><p>Lanterns come on. When the village throws a festival, everyone gets cake.</p></article>
     <article><span class="dot" style="background:#2A58B8"><svg class="ico" viewBox="0 0 24 24"><path d="M15.5 3.2A8.8 8.8 0 1 0 20.8 16 7 7 0 0 1 15.5 3.2z" fill="currentColor"/></svg></span>
-      <div class="gframe soft"><picture><source type="image/webp" srcset="img/shot_glowcap_hollow_night_1-sm.webp 1x, img/shot_glowcap_hollow_night_1.webp 2x"><img src="img/shot_glowcap_hollow_night_1-sm.jpg" srcset="img/shot_glowcap_hollow_night_1-sm.jpg 1x, img/shot_glowcap_hollow_night_1.jpg 2x" alt="Glowing mushrooms lighting up Glowcap Hollow at night" style="object-position:center 55%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><h3>Night</h3><p>Glowing mushrooms, fireflies and a good place to stop for the day.</p></article>
+      <div class="gframe soft"><picture><source type="image/webp" srcset="img/play_glowcap_night-sm.webp 1x, img/play_glowcap_night.webp 2x"><img src="img/play_glowcap_night-sm.jpg" srcset="img/play_glowcap_night-sm.jpg 1x, img/play_glowcap_night.jpg 2x" alt="Giant mushrooms in Glowcap Hollow at night" style="object-position:center 55%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div><h3>Night</h3><p>Glowing mushrooms, fireflies and a good place to stop for the day.</p></article>
   </div>
   <div class="panel dusk-card"><span class="q">?</span><div><h3>Questions at dusk</h3><p>When the sun sets in the game, a little card can ask everyone playing a question to talk about together, like <q>What should we build next?</q></p></div></div>
-</div></section>
-
-<!-- ============================ 9. Gentle or daring (landing_5) ============================ -->
-<section class="sec"><div class="wrap">
-  <span class="kicker">Play your way</span>
-  <h2 class="orn-h">Gentle or daring, you choose</h2>
-  <div class="duo5">
-    <article class="panel capy"><div class="pic"><picture><source type="image/webp" srcset="img/shot_capybara_2-sm.webp 1x, img/shot_capybara_2.webp 2x"><img src="img/shot_capybara_2-sm.jpg" srcset="img/shot_capybara_2-sm.jpg 1x, img/shot_capybara_2.jpg 2x" alt="A player relaxing next to a capybara" style="object-position:center 55%" loading="lazy" decoding="async"></picture><span class="lbl shot">In-game screenshot</span></div>
-      <div class="txt"><h3 class="gem-h" style="font-size:27px">Friends in every corner</h3><p>Capybaras, horses and pets are all waiting to be befriended. Creatures are never hurt for good: they are cleansed, and animals simply run home.</p></div></article>
-    <div class="modes5">
-      <article class="panel mode5"><span class="tagx tag-g" style="background:#2F6B33">Explore</span><h3>Roam at your own pace</h3><p>Creatures never attack and there are no levels to grind. Perfect for younger explorers and builders.</p></article>
-      <article class="panel mode5"><span class="tagx" style="background:#E38B1F">Survival</span><h3>A world that pushes back</h3><p>Hunger, thirst, cold and heat for older players who want a challenge. The host picks which rules are on.</p></article>
-      <article class="panel mode5"><span class="tagx tag-n" style="background:#173A8C">Motion play</span><h3>Move to play</h3><p>Optional webcam motion controls turn your moves into Tatazo's. The camera picture never leaves your computer.</p></article>
-    </div>
-  </div>
 </div></section>
 
 <!-- ============================ 10. Made with families in mind (landing_5) ============================ -->
@@ -434,7 +467,7 @@
       <div><span class="kicker left" style="color:var(--kicker-2)">For parents and carers</span>
         <h2>Made with families in mind</h2>
         <p>Here is what TATAZO does to keep play kind, private and fair, and the controls grown-ups get. It is all in plain words in the family guide.</p></div>
-      <a class="btn btn-gold btn-lg" href="#">Read the family guide</a>
+      <a class="btn btn-gold btn-lg" href="https://wiki.playtatazo.online/guides/family-safety.html" data-config-link="WIKI_URL" data-config-path="guides/family-safety.html">Read the family guide</a>
     </div>
     <div class="promise">
       <div><span class="pi" style="background:#2F6B33"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M6 6l12 12" stroke="currentColor" stroke-width="2.4"/></svg></span><div><h3>No ads, no trackers</h3><p>No advertising and no third-party analytics, in the game or on this site.</p></div></div>
