@@ -51,7 +51,7 @@
 .pw-facts { list-style: none; margin: 22px 0 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
 .pw-facts li { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px 7px 10px; border-radius: 999px; font: 800 14.5px var(--sans); color: #FFF7E2;
   background: rgba(8,22,64,.5); box-shadow: inset 0 0 0 1.5px rgba(246,217,131,.55); }
-.pw-facts li::before { content: ""; width: 16px; height: 16px; flex: none; background: url(img/gem.svg) center / contain no-repeat; }
+.pw-facts li::before { content: ""; width: 16px; height: 16px; flex: none; background: url(img/gem.svg?v=dbd23718bf) center / contain no-repeat; }
 
 /* ============================================================================================
    Ways to play: the six world types (painted cards, Codex art in the brand look)
