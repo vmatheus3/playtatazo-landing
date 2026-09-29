@@ -65,35 +65,61 @@ body { width: 100%; overflow-x: hidden; }
    ============================================================================================ */
 .nav-cta { display: none; }
 
-/* Mobile top bar (r-20260928-112, owner's choice): no logo (the hero's own is right below the
-   header) and no hamburger (there is nothing on this page worth jumping to) - just Wiki, Forum
-   (the same navy serif text and gold diamond bullet as the desktop nav) and a Wishlist on Steam
-   button that shrinks to the heart plus "Wishlist". The full desktop nav (and its brand mark,
-   and the corner meander ornaments) simply hide. */
+/* Mobile top bar: the gilded pill (owner's pick, r-20260928-119; concepts in web/landing/mockups/).
+   No logo (the hero's own is right below), no hamburger, no corner ornaments: a floating parchment
+   capsule with a gold frame and a gem clasp, holding Wiki, Forum and the heart wishlist. The bar
+   itself goes see-through and stays fixed at the top, so the pill floats over the hero sky and
+   follows the reader down the page. The desktop nav, brand mark and meanders simply hide. */
 .nav-mobile { display: none; }
 @media (max-width: 900px) {
-  .bar { padding: 0 18px; gap: 10px; }
-  .brand { display: none; }
-  .top-cta { display: none; }
-  .nav { display: none; }
+  html { scroll-padding-top: 84px; }
+  .top { position: fixed; left: 0; right: 0; top: 0; background: none; border: 0; box-shadow: none; pointer-events: none; }
   .top::before, .top::after { display: none; }
+  .bar { height: auto; padding: 12px 12px 0; gap: 0; }
+  .brand, .top-cta, .nav { display: none; }
+  /* the hero sits under the floating pill: room for it above the logo's crown and the art label */
+  .hero .hero-in { padding-top: 80px; }
+  .hero > .lbl.lbl { top: 84px; }
+
   .nav-mobile {
-    display: flex; align-items: center; gap: 2px; margin-left: auto; width: 100%; justify-content: flex-end;
+    pointer-events: auto; position: relative; display: flex; align-items: center;
+    width: 100%; max-width: 440px; height: 58px; margin: 0 auto; padding: 0 7px 0 8px; border-radius: 999px;
+    border: 2.5px solid transparent;
+    background: linear-gradient(180deg, rgba(255,252,244,.96), rgba(246,236,212,.96)) padding-box, var(--gframe) border-box;
+    box-shadow: inset 0 0 0 2px rgba(255,252,244,.95), inset 0 0 0 3.2px rgba(217,164,65,.55),
+      0 10px 24px rgba(20,40,90,.26), 0 2px 5px rgba(20,40,90,.16);
+    -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
   }
-  .nav-mobile a:not(.btn) {
-    position: relative; padding: 7px 8px; border-radius: 8px; font: 700 15px var(--serif); color: var(--nav-ink); text-decoration: none;
+  .nav-mobile::before { /* the gem clasp on the top edge */
+    content: ""; position: absolute; left: 50%; top: -10px; width: 18px; height: 18px; margin-left: -9px;
+    background: url(img/gem.svg) center / contain no-repeat; filter: drop-shadow(0 1px 1px rgba(80,50,10,.35));
   }
-  .nav-mobile a:not(.btn) + a:not(.btn)::before {
-    content: ""; position: absolute; left: -3px; top: 50%; width: 7px; height: 7px; margin-top: -3.5px;
+  .nav-mobile a { text-decoration: none; -webkit-tap-highlight-color: transparent; }
+  .nav-mobile .ico { font-size: 18px; }
+  .nm-link {
+    position: relative; display: inline-flex; align-items: center; gap: 7px; height: 44px; padding: 0 12px;
+    border-radius: 999px; font: 700 16px var(--serif); color: #14285F;
+  }
+  .nm-link .ico { color: #B07A1E; }
+  .nm-link + .nm-link { margin-right: auto; }
+  .nm-link + .nm-link::before {
+    content: ""; position: absolute; left: -4px; top: 50%; width: 8px; height: 8px; margin-top: -4px;
     background: url(img/dia.svg) center / contain no-repeat;
   }
-  .nav-mobile-wish { margin-left: 6px; height: 38px; padding: 0 14px 0 12px; font-size: 14px; gap: 6px; flex: none; }
-  .nav-mobile-wish .ico { font-size: 17px; }
+  .nm-link:active { background: rgba(217,164,65,.16); }
+  .nm-wish {
+    flex: none; display: inline-flex; align-items: center; gap: 7px; height: 42px; padding: 0 16px 0 13px; border-radius: 999px;
+    font: 800 15px var(--sans); color: #fff; text-shadow: 0 1px 1px rgba(0,60,80,.5);
+    background: linear-gradient(180deg, #45D8E8, #16AFC4 55%, #0E90A6);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.55), inset 0 0 0 1.5px #0B7F96, 0 0 0 2px #F6D983, 0 0 0 3.2px #B8862A, 0 3px 8px rgba(14,100,120,.3);
+  }
+  .nm-wish .ico { font-size: 17px; }
+  .nm-wish:active { filter: brightness(.95); }
+  .nav-mobile a:focus-visible { outline: 2px solid #0E9CB2; outline-offset: 2px; }
 }
-@media (max-width: 360px) {
-  .bar { gap: 4px; }
-  .nav-mobile a:not(.btn) { padding: 6px 5px; font-size: 13.5px; }
-  .nav-mobile-wish { padding: 0 10px 0 9px; font-size: 12.5px; gap: 5px; }
+@media (max-width: 370px) {
+  .nm-link { padding: 0 9px; font-size: 15px; gap: 5px; }
+  .nm-wish { padding: 0 12px 0 10px; font-size: 14px; }
 }
 
 /* ============================================================================================
