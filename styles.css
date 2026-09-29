@@ -537,8 +537,11 @@ figure { margin: 0; }
 .foot-in { width: 1300px; margin: 0 auto; padding: 16px 0 6px; display: flex; align-items: center; gap: 24px; min-height: 58px; }
 .foot-brand { flex: 1 1 0; display: flex; align-items: center; text-decoration: none; }
 .foot-brand img { display: block; height: 34px; width: auto; }
-.foot-motto { margin: 0; font: 400 16px var(--serif); display: flex; align-items: center; gap: 14px; color: #F4ECDA; flex: none; }
-.foot-motto::before, .foot-motto::after { content: ""; width: 16px; height: 16px; background: url(img/dia-line.svg?v=350d4381ea) center / contain no-repeat; }
+/* The gold gem divider between the wordmark and the links (owner, 2026-09-28: no typed slogan next to the
+   wordmark, design/brand/LOGO.md); the same ornament as the mobile footer. */
+.foot-motto { flex: none; display: block; width: 220px; height: 24px; margin: 0;
+  background: url(img/dv.svg?v=0fbad83670) center / 84px 21px no-repeat,
+    linear-gradient(90deg, rgba(231,181,60,0), rgba(231,181,60,.85) 30%, rgba(231,181,60,.85) 70%, rgba(231,181,60,0)) center / 100% 1.5px no-repeat; }
 .foot-links { flex: 1 1 0; display: flex; justify-content: flex-end; align-items: center; gap: 4px; }
 .foot-links a { font: 700 12px var(--caps); letter-spacing: .1em; text-transform: uppercase; color: #F4ECDA; text-decoration: none; padding: 4px 6px; }
 .foot-links a + a::before { content: ""; display: inline-block; width: 8px; height: 10px; margin: 0 12px 0 0; vertical-align: -1px; background: url(img/dia.svg?v=5de6748d8b) center / contain no-repeat; }
