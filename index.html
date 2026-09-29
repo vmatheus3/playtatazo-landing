@@ -56,7 +56,7 @@
 
 <!-- Preload the hero's key art and logo so first paint of the fold has no delay. -->
 <link rel="preload" as="image" href="img/art_library_hero.webp?v=83cf0e0043" type="image/webp" fetchpriority="high">
-<link rel="preload" as="image" href="img/logo_lockup-sm.webp?v=a7e551819f" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" fetchpriority="high" imagesrcset="img/logo_badge-540.webp 540w, img/logo_badge-800.webp 800w, img/logo_badge-1070.webp 1070w, img/logo_badge-1468.webp 1468w" imagesizes="(max-width: 1023px) calc(min(100vw - 48px, 460px) * .956), 535px">
 <link rel="preload" as="font" href="fonts/cinzel.woff2?v=880c8634ca" type="font/woff2" crossorigin>
 <link rel="preload" as="font" href="fonts/merriweather.woff2?v=29f94d0517" type="font/woff2" crossorigin>
 
@@ -69,8 +69,8 @@
   document.documentElement.setAttribute("data-theme", t);
 })();
 </script>
-<link rel="stylesheet" href="styles.css?v=8beec967af">
-<link rel="stylesheet" href="responsive.css?v=496efc08f6">
+<link rel="stylesheet" href="styles.css?v=21fbed8235">
+<link rel="stylesheet" href="responsive.css?v=7bbfc54f1f">
 <link rel="stylesheet" href="glowup.css?v=57d5df57ff">
 <script src="config.js?v=d0a767310e" defer></script>
 <script src="newsletter.js?v=7ea795d334" defer></script>
@@ -106,7 +106,7 @@
   <div class="moon"></div>
   <div class="sparkles"></div>
   <div class="hero-in">
-    <picture><source type="image/webp" srcset="img/logo_lockup-sm.webp?v=a7e551819f 1x, img/logo_lockup.webp?v=18a3b93043 2x"><img class="lockup" src="img/logo_lockup-sm.png?v=d57b8dd62b" srcset="img/logo_lockup-sm.png?v=d57b8dd62b 1x, img/logo_lockup.png?v=8b5b9edd1f 2x" alt="TATAZO: Forge your legend" decoding="async"></picture>
+    <picture><source type="image/webp" srcset="img/logo_badge-540.webp?v=966af4d7f6 540w, img/logo_badge-800.webp?v=8e18300ce3 800w, img/logo_badge-1070.webp?v=196eea9304 1070w, img/logo_badge-1468.webp?v=5e9936839f 1468w" sizes="(max-width: 1023px) calc(min(100vw - 48px, 460px) * .956), 535px"><img class="lockup" src="img/logo_badge-540.png?v=bae6624e85" srcset="img/logo_badge-540.png?v=bae6624e85 540w, img/logo_badge-1070.png?v=41d655d1e4 1070w" sizes="(max-width: 1023px) calc(min(100vw - 48px, 460px) * .956), 535px" width="1468" height="797" alt="TATAZO: Forge your legend" decoding="async" fetchpriority="high"></picture>
     <p class="pitch">A family open-world adventure. Sail between faraway lands, choose your class, tame a winged pegasus, and face Aurendrake, the Old Warden, together.</p>
     <div class="cta-row">
       <a class="btn btn-steam btn-lg" href="#"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.3-9.5C1.4 7.9 3.6 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.8 1.3-1.7 2.9-2.8 4.9-2.8 3.5 0 5.7 3.4 4.4 7-1.8 4.9-9.3 9.5-9.3 9.5z" fill="currentColor"/></svg>Wishlist on Steam</a>

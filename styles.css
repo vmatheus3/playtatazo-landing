@@ -210,7 +210,10 @@ figure { margin: 0; }
 .hero .sparkles { position: absolute; inset: 0; z-index: 2; pointer-events: none; background:
   url(img/sparkle.svg?v=60fefd41f8) 12% 20% / 22px no-repeat, url(img/sparkle.svg?v=60fefd41f8) 46% 14% / 16px no-repeat, url(img/sparkle.svg?v=60fefd41f8) 40% 78% / 20px no-repeat, url(img/sparkle.svg?v=60fefd41f8) 8% 70% / 14px no-repeat; opacity: .9; }
 .hero-in { position: relative; z-index: 3; width: 640px; margin-left: 110px; padding-top: 58px; text-align: center; }
-.hero-in .lockup { width: 560px; margin: 0 auto -6px; filter: drop-shadow(0 8px 14px rgba(10,30,70,.35)); }
+/* The badge file is trimmed to its visible pixels (scripts/landing-hero-logo.py). --lw is the box the old,
+   untrimmed file filled; the width and margins below keep the badge exactly where and as big as it was. */
+.hero-in .lockup { --lw: 560px; width: calc(var(--lw) * .956); height: auto;
+  margin: calc(var(--lw) * .0514) auto calc(var(--lw) * .0943); filter: drop-shadow(0 8px 14px rgba(10,30,70,.35)); }
 .hero-in .pitch { font: 600 21px/1.55 var(--sans); color: var(--ink); margin: 6px auto 26px; max-width: 560px; }
 .hero-in .cta-row { display: flex; gap: 16px; justify-content: center; }
 .soon { margin: 24px auto 0; display: inline-flex; justify-content: center; align-items: center; gap: 12px; font: 700 14px var(--caps); letter-spacing: .22em; text-transform: uppercase;

@@ -165,7 +165,7 @@ body { width: 100%; overflow-x: hidden; }
 @media (max-width: 1023px) {
   .hero { height: auto; min-height: 620px; padding-bottom: 40px; }
   .hero-in { width: 100%; max-width: 560px; margin: 0 auto; padding: 40px 24px 0; }
-  .hero-in .lockup { width: 100%; max-width: 460px; }
+  .hero-in .lockup { --lw: min(100%, 460px); }
   /* On narrow screens the pitch sits over the busy key art: give it a soft parchment plate (navy at night). */
   .hero-in .pitch { background: rgba(255, 250, 238, .86); padding: 10px 14px; border-radius: 12px; box-shadow: 0 4px 14px rgba(20, 30, 60, .18); }
   [data-theme="night"] .hero-in .pitch { background: rgba(14, 26, 54, .8); }
