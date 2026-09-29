@@ -5,5 +5,7 @@ window.TATAZO_CONFIG = {
   SUPABASE_ANON_KEY: "",
   WIKI_URL: "https://wiki.playtatazo.online/",
   FORUM_URL: "https://forum.playtatazo.online/",
-  SITE_URL: "https://playtatazo.online/"
+  SITE_URL: "https://playtatazo.online/",
+  // Set when the Steam store page is live.
+  STEAM_WISHLIST_URL: "#"
 };

@@ -131,7 +131,8 @@ figure { margin: 0; }
 .top::before, .top::after { content: ""; position: absolute; top: 8px; width: 30px; height: 30px; opacity: .9; background: url(img/meander.svg) center / contain no-repeat; }
 .top::before { left: 10px; } .top::after { right: 10px; }
 .bar { position: relative; z-index: 2; height: 76px; display: flex; align-items: center; gap: 22px; padding: 0 60px 0 70px; }
-.brand { flex: none; width: 190px; height: 70px; background: url(img/logo_primary.png) center / 236px auto no-repeat; filter: drop-shadow(0 2px 2px rgba(80,50,10,.25)); }
+.brand { flex: none; display: flex; align-items: center; height: 52px; filter: drop-shadow(0 2px 2px rgba(80,50,10,.25)); }
+.brand img { display: block; height: 100%; width: auto; }
 .nav { flex: 1; display: flex; justify-content: center; }
 .nav a { position: relative; padding: 7px 14px; margin: 0 5px; border-radius: 10px; font: 700 17px var(--serif); color: var(--nav-ink); text-decoration: none; white-space: nowrap; }
 .nav a + a::before { content: ""; position: absolute; left: -9px; top: 50%; width: 8px; height: 8px; margin-top: -4px; background: url(img/dia.svg) center / contain no-repeat; }
@@ -534,7 +535,8 @@ figure { margin: 0; }
   border-top: 2px solid var(--gold-2);
   box-shadow: inset 0 3px 0 var(--foot-b), inset 0 4px 0 rgba(231,181,60,.6), inset 0 -3px 0 var(--foot-b), inset 0 -4px 0 rgba(231,181,60,.6); }
 .foot-in { width: 1300px; margin: 0 auto; padding: 16px 0 6px; display: flex; align-items: center; gap: 24px; min-height: 58px; }
-.foot-brand { font: 700 22px var(--caps); letter-spacing: .04em; color: var(--gold); text-decoration: none; flex: 1 1 0; }
+.foot-brand { flex: 1 1 0; display: flex; align-items: center; text-decoration: none; }
+.foot-brand img { display: block; height: 34px; width: auto; }
 .foot-motto { margin: 0; font: 400 16px var(--serif); display: flex; align-items: center; gap: 14px; color: #F4ECDA; flex: none; }
 .foot-motto::before, .foot-motto::after { content: ""; width: 16px; height: 16px; background: url(img/dia-line.svg) center / contain no-repeat; }
 .foot-links { flex: 1 1 0; display: flex; justify-content: flex-end; align-items: center; gap: 4px; }

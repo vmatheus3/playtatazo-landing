@@ -23,7 +23,7 @@
       "applicationCategory": "Game",
       "playMode": ["SinglePlayer", "CoOp", "MultiPlayer"],
       "inLanguage": "en",
-      "keywords": "family game, open world adventure, co-op game, play with friends, fun game for kids and parents, pets, pegasus, crafting, building, play with a controller or mouse and keyboard, survival mode, peaceful explore mode, motion controls, PC game",
+      "keywords": "family game, open world adventure, co-op game, play with friends, fun game for kids and parents, pets, pegasus, crafting, building, play with a controller or mouse and keyboard, survival mode, peaceful explore mode, PC game",
       "sameAs": ["https://wiki.playtatazo.online/"]
     },
     {
@@ -75,22 +75,29 @@
 <script src="config.js" defer></script>
 <script src="newsletter.js" defer></script>
 <script src="nav.js" defer></script>
+<script src="dressup-data.js" defer></script>
+<script src="dressup.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 
 <!-- ============================ 1. Header and hero (landing_1, Epic Gold) ============================ -->
 <header class="top"><div class="bar">
-  <a class="brand" href="#top" aria-label="TATAZO home"></a>
-  <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-    <span class="nav-toggle-bars" aria-hidden="true"></span>
-  </button>
+  <a class="brand" href="#top" aria-label="TATAZO home"><picture><source type="image/webp" srcset="img/logo_letters-sm.webp 1x, img/logo_letters.webp 2x"><img src="img/logo_letters-sm.png" srcset="img/logo_letters-sm.png 1x, img/logo_letters.png 2x" alt="TATAZO" decoding="async"></picture></a>
   <nav class="nav" id="site-nav" aria-label="Main">
     <a class="on" href="#top">The Game</a><a href="#world">The World</a><a href="#modes">Modes</a><a href="#classes">Heroes</a><a href="#bosses">Legends</a><a href="#parents">Families</a>
     <a href="#" data-config-link="WIKI_URL">Wiki</a><a href="#" data-config-link="FORUM_URL">Forum</a>
-    <a class="btn btn-steam nav-cta" href="#"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.3-9.5C1.4 7.9 3.6 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.8 1.3-1.7 2.9-2.8 4.9-2.8 3.5 0 5.7 3.4 4.4 7-1.8 4.9-9.3 9.5-9.3 9.5z" fill="currentColor"/></svg>Wishlist on Steam</a>
+    <a class="btn btn-steam nav-cta" href="#" data-config-link="STEAM_WISHLIST_URL"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.3-9.5C1.4 7.9 3.6 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.8 1.3-1.7 2.9-2.8 4.9-2.8 3.5 0 5.7 3.4 4.4 7-1.8 4.9-9.3 9.5-9.3 9.5z" fill="currentColor"/></svg>Wishlist on Steam</a>
   </nav>
-  <a class="btn btn-steam top-cta" href="#"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.3-9.5C1.4 7.9 3.6 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.8 1.3-1.7 2.9-2.8 4.9-2.8 3.5 0 5.7 3.4 4.4 7-1.8 4.9-9.3 9.5-9.3 9.5z" fill="currentColor"/></svg>Wishlist on Steam</a>
+  <a class="btn btn-steam top-cta" href="#" data-config-link="STEAM_WISHLIST_URL"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.3-9.5C1.4 7.9 3.6 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.8 1.3-1.7 2.9-2.8 4.9-2.8 3.5 0 5.7 3.4 4.4 7-1.8 4.9-9.3 9.5-9.3 9.5z" fill="currentColor"/></svg>Wishlist on Steam</a>
+  <!-- Mobile top bar (r-20260928-112, owner's choice): no logo (the hero's is right below), no
+       hamburger (there is nothing to jump to on a page you just scroll) - just Forum, Wiki and a
+       heart-only wishlist button. -->
+  <nav class="nav-mobile" aria-label="Quick links">
+    <a href="#" data-config-link="WIKI_URL">Wiki</a>
+    <a href="#" data-config-link="FORUM_URL">Forum</a>
+    <a class="btn btn-steam nav-mobile-wish" href="#" data-config-link="STEAM_WISHLIST_URL"><svg class="ico" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.3-9.5C1.4 7.9 3.6 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.8 1.3-1.7 2.9-2.8 4.9-2.8 3.5 0 5.7 3.4 4.4 7-1.8 4.9-9.3 9.5-9.3 9.5z" fill="currentColor"/></svg>Wishlist</a>
+  </nav>
 </div><span class="leaves l"></span><span class="leaves r"></span></header>
 
 <main id="main">
@@ -380,29 +387,33 @@
   </div>
 </div></section>
 
-<section class="sec bg-alt"><div class="wrap">
+<section class="sec bg-alt" id="wardrobe"><div class="wrap">
   <span class="kicker">The wardrobe</span>
   <h2 class="orn-h">Change your look</h2>
-  <p class="sub">Sun-gold armour, storm robes, moonflower ninja wraps, lighthouse-keeper coats. Every class has looks to earn and wear, and Tatazo can be a boy or a girl gator.</p>
-  <div class="wardrobe">
-    <figure><picture><source type="image/webp" srcset="img/skin_knight_sun-sm.webp 1x, img/skin_knight_sun.webp 2x"><img src="img/skin_knight_sun-sm.png" srcset="img/skin_knight_sun-sm.png 1x, img/skin_knight_sun.png 2x" alt="Sun-gold Knight armour" loading="lazy" decoding="async"></picture></figure>
-    <figure><picture><source type="image/webp" srcset="img/skin_mage_aurora-sm.webp 1x, img/skin_mage_aurora.webp 2x"><img src="img/skin_mage_aurora-sm.png" srcset="img/skin_mage_aurora-sm.png 1x, img/skin_mage_aurora.png 2x" alt="Aurora Mage robes" loading="lazy" decoding="async"></picture></figure>
-    <figure><picture><source type="image/webp" srcset="img/skin_ninja_crimson-sm.webp 1x, img/skin_ninja_crimson.webp 2x"><img src="img/skin_ninja_crimson-sm.png" srcset="img/skin_ninja_crimson-sm.png 1x, img/skin_ninja_crimson.png 2x" alt="Crimson Ninja wraps" loading="lazy" decoding="async"></picture></figure>
-    <figure><picture><source type="image/webp" srcset="img/skin_shooter_explorer-sm.webp 1x, img/skin_shooter_explorer.webp 2x"><img src="img/skin_shooter_explorer-sm.png" srcset="img/skin_shooter_explorer-sm.png 1x, img/skin_shooter_explorer.png 2x" alt="Explorer Shooter gear" loading="lazy" decoding="async"></picture></figure>
-    <figure><picture><source type="image/webp" srcset="img/skin_monster_magma-sm.webp 1x, img/skin_monster_magma.webp 2x"><img src="img/skin_monster_magma-sm.png" srcset="img/skin_monster_magma-sm.png 1x, img/skin_monster_magma.png 2x" alt="Magma Monster look" loading="lazy" decoding="async"></picture></figure>
-    <figure><picture><source type="image/webp" srcset="img/skin_knight_thunder-sm.webp 1x, img/skin_knight_thunder.webp 2x"><img src="img/skin_knight_thunder-sm.png" srcset="img/skin_knight_thunder-sm.png 1x, img/skin_knight_thunder.png 2x" alt="Storm-thunder Knight armour" loading="lazy" decoding="async"></picture></figure>
-    <figure><picture><source type="image/webp" srcset="img/skin_mage_storm-sm.webp 1x, img/skin_mage_storm.webp 2x"><img src="img/skin_mage_storm-sm.png" srcset="img/skin_mage_storm-sm.png 1x, img/skin_mage_storm.png 2x" alt="Storm Mage robes" loading="lazy" decoding="async"></picture></figure>
-    <figure><picture><source type="image/webp" srcset="img/skin_ninja_moonflower-sm.webp 1x, img/skin_ninja_moonflower.webp 2x"><img src="img/skin_ninja_moonflower-sm.png" srcset="img/skin_ninja_moonflower-sm.png 1x, img/skin_ninja_moonflower.png 2x" alt="Moonflower Ninja wraps" loading="lazy" decoding="async"></picture></figure>
-    <figure><picture><source type="image/webp" srcset="img/skin_shooter_lighthouse-sm.webp 1x, img/skin_shooter_lighthouse.webp 2x"><img src="img/skin_shooter_lighthouse-sm.png" srcset="img/skin_shooter_lighthouse-sm.png 1x, img/skin_shooter_lighthouse.png 2x" alt="Lighthouse-keeper Shooter coat" loading="lazy" decoding="async"></picture></figure>
-    <figure><picture><source type="image/webp" srcset="img/skin_monster_coral-sm.webp 1x, img/skin_monster_coral.webp 2x"><img src="img/skin_monster_coral-sm.png" srcset="img/skin_monster_coral-sm.png 1x, img/skin_monster_coral.png 2x" alt="Coral Monster look" loading="lazy" decoding="async"></picture></figure>
-    <figure><picture><source type="image/webp" srcset="img/skin_knight_tide-sm.webp 1x, img/skin_knight_tide.webp 2x"><img src="img/skin_knight_tide-sm.png" srcset="img/skin_knight_tide-sm.png 1x, img/skin_knight_tide.png 2x" alt="Tide-blue Knight armour" loading="lazy" decoding="async"></picture></figure>
-    <figure><picture><source type="image/webp" srcset="img/skin_mage_ember-sm.webp 1x, img/skin_mage_ember.webp 2x"><img src="img/skin_mage_ember-sm.png" srcset="img/skin_mage_ember-sm.png 1x, img/skin_mage_ember.png 2x" alt="Ember Mage robes" loading="lazy" decoding="async"></picture></figure>
-    <figure><picture><source type="image/webp" srcset="img/skin_ninja_orchid-sm.webp 1x, img/skin_ninja_orchid.webp 2x"><img src="img/skin_ninja_orchid-sm.png" srcset="img/skin_ninja_orchid-sm.png 1x, img/skin_ninja_orchid.png 2x" alt="Orchid Ninja wraps" loading="lazy" decoding="async"></picture></figure>
-    <figure><picture><source type="image/webp" srcset="img/skin_shooter_goldenhour-sm.webp 1x, img/skin_shooter_goldenhour.webp 2x"><img src="img/skin_shooter_goldenhour-sm.png" srcset="img/skin_shooter_goldenhour-sm.png 1x, img/skin_shooter_goldenhour.png 2x" alt="Golden-hour Shooter gear" loading="lazy" decoding="async"></picture></figure>
-    <figure><picture><source type="image/webp" srcset="img/skin_monster_glacier-sm.webp 1x, img/skin_monster_glacier.webp 2x"><img src="img/skin_monster_glacier-sm.png" srcset="img/skin_monster_glacier-sm.png 1x, img/skin_monster_glacier.png 2x" alt="Glacier Monster look" loading="lazy" decoding="async"></picture></figure>
-    <figure class="more"><div>And many more<small>to find on your journey</small></div></figure>
+  <p class="sub">Sun-gold armour, storm robes, moonflower ninja wraps, lighthouse-keeper coats. Pick a class, pick a look, and watch it land on Tatazo. He can be a boy or a girl gator, and there are 70 looks to earn and wear.</p>
+  <div class="dressup" id="dressup" data-cls="knight">
+    <div class="du-stage">
+      <div class="du-glow" aria-hidden="true"></div>
+      <div class="du-disc" aria-hidden="true"></div>
+      <img class="du-figure" id="du-figure" src="img/skins/knight_sun_boy.webp" alt="Tatazo the Knight wearing the Sunstone Sentinel look" width="420" height="480">
+      <span class="lbl shot">In-game model, rendered by the game</span>
+      <button type="button" class="du-gender" id="du-gender" aria-pressed="false" aria-label="Show the girl gator instead">
+        <span class="opt boy">Boy</span><span class="opt girl">Girl</span>
+      </button>
+    </div>
+    <div class="du-panel">
+      <div class="du-classes" role="tablist" aria-label="Choose a class" id="du-classes">
+        <button type="button" role="tab" aria-selected="true" tabindex="0" data-cls="knight"><picture><source type="image/webp" srcset="img/emblem_knight-sm.webp 1x, img/emblem_knight.webp 2x"><img src="img/emblem_knight-sm.png" srcset="img/emblem_knight-sm.png 1x, img/emblem_knight.png 2x" alt="" loading="lazy" decoding="async"></picture><span>Knight</span></button>
+        <button type="button" role="tab" aria-selected="false" tabindex="-1" data-cls="mage"><picture><source type="image/webp" srcset="img/emblem_mage-sm.webp 1x, img/emblem_mage.webp 2x"><img src="img/emblem_mage-sm.png" srcset="img/emblem_mage-sm.png 1x, img/emblem_mage.png 2x" alt="" loading="lazy" decoding="async"></picture><span>Mage</span></button>
+        <button type="button" role="tab" aria-selected="false" tabindex="-1" data-cls="shooter"><picture><source type="image/webp" srcset="img/emblem_shooter-sm.webp 1x, img/emblem_shooter.webp 2x"><img src="img/emblem_shooter-sm.png" srcset="img/emblem_shooter-sm.png 1x, img/emblem_shooter.png 2x" alt="" loading="lazy" decoding="async"></picture><span>Shooter</span></button>
+        <button type="button" role="tab" aria-selected="false" tabindex="-1" data-cls="ninja"><picture><source type="image/webp" srcset="img/emblem_ninja-sm.webp 1x, img/emblem_ninja.webp 2x"><img src="img/emblem_ninja-sm.png" srcset="img/emblem_ninja-sm.png 1x, img/emblem_ninja.png 2x" alt="" loading="lazy" decoding="async"></picture><span>Ninja</span></button>
+        <button type="button" role="tab" aria-selected="false" tabindex="-1" data-cls="monster"><picture><source type="image/webp" srcset="img/emblem_monster-sm.webp 1x, img/emblem_monster.webp 2x"><img src="img/emblem_monster-sm.png" srcset="img/emblem_monster-sm.png 1x, img/emblem_monster.png 2x" alt="" loading="lazy" decoding="async"></picture><span>Monster</span></button>
+      </div>
+      <h3 class="du-name" id="du-name">Sunstone Sentinel</h3>
+      <p class="du-blurb" id="du-blurb">Gold plates, a red tabard and an ember crest.</p>
+      <div class="du-swatches" role="listbox" aria-label="Choose a skin" id="du-swatches"></div>
+    </div>
   </div>
-  <div class="mini-lbl"><span class="lbl shot">In-game models, rendered by the game</span></div>
 </div></section>
 
 <!-- ============================ 6. Realm bosses (landing_4) ============================ -->
@@ -472,7 +483,7 @@
     <div class="promise">
       <div><span class="pi" style="background:#2F6B33"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M6 6l12 12" stroke="currentColor" stroke-width="2.4"/></svg></span><div><h3>No ads, no trackers</h3><p>No advertising and no third-party analytics, in the game or on this site.</p></div></div>
       <div><span class="pi" style="background:#E38B1F"><svg class="ico" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="2" fill="currentColor"/><path d="M4 8l3-4h10l3 4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 5l14 14" stroke="#fff" stroke-width="2.4"/></svg></span><div><h3>No loot boxes</h3><p>Nothing is random for money, there are no timers, and coins are earned only by playing.</p></div></div>
-      <div><span class="pi" style="background:#173A8C"><svg class="ico" viewBox="0 0 24 24"><rect x="2.5" y="6" width="13" height="12" rx="3" fill="currentColor"/><path d="M15.5 10l6-3.5v11l-6-3.5z" fill="currentColor"/><path d="M6 12.5l2 2 3.5-4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span><div><h3>The webcam never leaves your PC</h3><p>Motion controls are optional and work entirely on your own computer. Camera pictures and body positions are never sent anywhere.</p></div></div>
+      <div><span class="pi" style="background:#173A8C"><svg class="ico" viewBox="0 0 24 24"><path d="M4 21V6M9 21V4M15 21V4M20 21V6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M2 10.5h20M2 15.5h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><div><h3>Your build is protected</h3><p>A Home Totem guards what you build. Only friends you add can build, dig or open your chests.</p></div></div>
       <div><span class="pi" style="background:#22C3D6"><svg class="ico" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2" fill="currentColor"/><path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2.4"/></svg></span><div><h3>Controls for grown-ups</h3><p>A Family screen behind a parent PIN: daily play time, trading, friend approval, break reminders, and purchases that stay off until you turn them on.</p></div></div>
       <div><span class="pi" style="background:#C0508A"><svg class="ico" viewBox="0 0 24 24"><path d="M4 5.5h16a1.5 1.5 0 0 1 1.5 1.5v9A1.5 1.5 0 0 1 20 17.5h-9l-5 3.5v-3.5H4A1.5 1.5 0 0 1 2.5 16V7A1.5 1.5 0 0 1 4 5.5z" fill="currentColor"/></svg></span><div><h3>No free-text chat</h3><p>Players talk with friendly preset phrases and emotes. Nobody can type a message to your child, and anyone can be muted or blocked.</p></div></div>
       <div><span class="pi" style="background:#D9A441"><svg class="ico" viewBox="0 0 24 24"><path d="M12 2 20 5v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5z" fill="currentColor"/></svg></span><div><h3>Worlds for everyone</h3><p>Every world says who it is for. A child's profile only lists worlds for everyone, and a host can lock a world with a password.</p></div></div>
@@ -530,7 +541,7 @@
 </main>
 
 <footer class="foot">
-  <div class="foot-in"><a class="foot-brand" href="#top">TATAZO</a><p class="foot-motto">Forge your legend</p>
+  <div class="foot-in"><a class="foot-brand" href="#top" aria-label="TATAZO home"><picture><source type="image/webp" srcset="img/logo_letters-sm.webp 1x, img/logo_letters.webp 2x"><img src="img/logo_letters-sm.png" srcset="img/logo_letters-sm.png 1x, img/logo_letters.png 2x" alt="TATAZO" loading="lazy" decoding="async"></picture></a><p class="foot-motto">Forge your legend</p>
     <nav class="foot-links" aria-label="Footer"><a href="#" data-config-link="WIKI_URL">Wiki</a><a href="#parents">Families</a><a href="#" data-config-link="FORUM_URL">Forum</a><a href="privacy.html">Privacy</a></nav></div>
   <p class="foot-note">Made by <b>Duck Mines Game Studio</b>. <b>TATAZO</b> is in development for PC. Pictures marked <b>Key art</b> or <b>Art</b> are painted; pictures marked <b>In-game screenshot</b> come straight from the game. This site has no ads and no trackers. Steam is a trademark of Valve Corporation.</p>
 </footer>

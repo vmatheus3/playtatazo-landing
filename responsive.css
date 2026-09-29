@@ -17,8 +17,7 @@ html { scroll-behavior: smooth; }
 }
 .skip-link:focus { top: 12px; }
 
-a:focus-visible, button:focus-visible, input:focus-visible, [role="tab"]:focus-visible,
-.nav-toggle:focus-visible {
+a:focus-visible, button:focus-visible, input:focus-visible, [role="tab"]:focus-visible {
   outline: 3px solid #22C3D6; outline-offset: 3px; border-radius: 6px;
 }
 .btn:focus-visible { outline-offset: 4px; }
@@ -30,11 +29,25 @@ a:focus-visible, button:focus-visible, input:focus-visible, [role="tab"]:focus-v
    still lets overflowing descendants inflate the initial containing block that position:fixed
    elements (the mobile nav) measure themselves against, pushing it off to one side. */
 html { overflow-x: hidden; }
-body { width: 100%; max-width: 1440px; margin: 0 auto; overflow-x: hidden; }
+/* Full-bleed (r-20260928-112, owner's direction): the body itself is NOT boxed, so every section's
+   own background (colour washes, gradients, art) spans the true window width at any size. Only the
+   content inside gets a sensible reading width via .wrap and friends, which grow in steps on wider
+   desktops instead of leaving the page pinned to one fixed column. */
+body { width: 100%; overflow-x: hidden; }
 .wrap { width: 100%; max-width: 1280px; padding: 0 40px; }
 .foot-in, .foot-note { width: 100%; max-width: 1300px; padding-left: 40px; padding-right: 40px; }
 .ribbon { width: 100%; max-width: 1240px; }
 .band .in { width: 100%; max-width: 1280px; padding: 0 40px; box-sizing: border-box; }
+@media (min-width: 1600px) {
+  .wrap { max-width: 1400px; }
+  .foot-in, .foot-note, .band .in { max-width: 1420px; }
+  .ribbon { max-width: 1360px; }
+}
+@media (min-width: 2000px) {
+  .wrap { max-width: 1520px; }
+  .foot-in, .foot-note, .band .in { max-width: 1540px; }
+  .ribbon { max-width: 1480px; }
+}
 
 /* Decorative flourishes that intentionally bleed past their container at the 1440px design width
    (corner palm fronds, the small gold dividers) become real horizontal overflow once that
@@ -50,41 +63,38 @@ body { width: 100%; max-width: 1440px; margin: 0 auto; overflow-x: hidden; }
 /* ============================================================================================
    Header + mobile nav
    ============================================================================================ */
-.nav-toggle {
-  display: none; width: 42px; height: 42px; margin-left: auto; border: 0; border-radius: 10px;
-  background: transparent; cursor: pointer; align-items: center; justify-content: center;
-}
-.nav-toggle-bars, .nav-toggle-bars::before, .nav-toggle-bars::after {
-  content: ""; display: block; width: 24px; height: 3px; border-radius: 2px; background: var(--nav-ink, #14285F);
-  transition: transform .2s ease, opacity .2s ease;
-}
-.nav-toggle-bars::before { transform: translateY(-7px); }
-.nav-toggle-bars::after { transform: translateY(4px); }
-.nav-toggle[aria-expanded="true"] .nav-toggle-bars { background: transparent; }
-.nav-toggle[aria-expanded="true"] .nav-toggle-bars::before { transform: translateY(0) rotate(45deg); }
-.nav-toggle[aria-expanded="true"] .nav-toggle-bars::after { transform: translateY(0) rotate(-45deg); }
 .nav-cta { display: none; }
 
+/* Mobile top bar (r-20260928-112, owner's choice): no logo (the hero's own is right below the
+   header) and no hamburger (there is nothing on this page worth jumping to) - just Wiki, Forum
+   (the same navy serif text and gold diamond bullet as the desktop nav) and a Wishlist on Steam
+   button that shrinks to the heart plus "Wishlist". The full desktop nav (and its brand mark,
+   and the corner meander ornaments) simply hide. */
+.nav-mobile { display: none; }
 @media (max-width: 900px) {
-  .bar { padding: 0 18px; gap: 12px; }
-  .brand { width: 140px; background-size: 170px auto; }
-  .nav-toggle { display: flex; }
+  .bar { padding: 0 18px; gap: 10px; }
+  .brand { display: none; }
   .top-cta { display: none; }
-  .nav {
-    position: fixed; inset: 0 0 0 auto; width: min(320px, 86vw); height: 100vh; z-index: 40;
-    display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start;
-    gap: 4px; padding: 90px 24px 24px; background: linear-gradient(180deg, var(--hdr-a), var(--hdr-b));
-    box-shadow: -8px 0 30px rgba(0,0,0,.35);
-    transform: translateX(100%); transition: transform .25s ease;
+  .nav { display: none; }
+  .top::before, .top::after { display: none; }
+  .nav-mobile {
+    display: flex; align-items: center; gap: 2px; margin-left: auto; width: 100%; justify-content: flex-end;
   }
-  .nav.open { transform: translateX(0); }
-  .nav a { margin: 0; text-align: left; font-size: 18px; }
-  .nav a.on { background: none; box-shadow: none; color: var(--kicker, #B07A1E); }
-  .nav a + a::before { display: none; }
-  .nav-cta { display: inline-flex; margin-top: 14px; }
-  body.nav-open { overflow: hidden; }
+  .nav-mobile a:not(.btn) {
+    position: relative; padding: 7px 8px; border-radius: 8px; font: 700 15px var(--serif); color: var(--nav-ink); text-decoration: none;
+  }
+  .nav-mobile a:not(.btn) + a:not(.btn)::before {
+    content: ""; position: absolute; left: -3px; top: 50%; width: 7px; height: 7px; margin-top: -3.5px;
+    background: url(img/dia.svg) center / contain no-repeat;
+  }
+  .nav-mobile-wish { margin-left: 6px; height: 38px; padding: 0 14px 0 12px; font-size: 14px; gap: 6px; flex: none; }
+  .nav-mobile-wish .ico { font-size: 17px; }
 }
-@media (prefers-reduced-motion: reduce) { .nav, .nav-toggle-bars, .nav-toggle-bars::before, .nav-toggle-bars::after { transition: none; } }
+@media (max-width: 360px) {
+  .bar { gap: 4px; }
+  .nav-mobile a:not(.btn) { padding: 6px 5px; font-size: 13.5px; }
+  .nav-mobile-wish { padding: 0 10px 0 9px; font-size: 12.5px; gap: 5px; }
+}
 
 /* ============================================================================================
    Newsletter form: honeypot, consent, status message
@@ -100,8 +110,18 @@ body { width: 100%; max-width: 1440px; margin: 0 auto; overflow-x: hidden; }
 .news input:disabled, .news button:disabled { opacity: .6; cursor: not-allowed; }
 
 /* ============================================================================================
-   Large desktop (>1440): body already caps and centers via max-width above; nothing else needed.
+   Large desktop (>1280): card grids grow with the window (auto-fit/minmax) instead of staying
+   pinned to a fixed column count, now that .wrap itself grows in steps above (r-20260928-112).
    ============================================================================================ */
+@media (min-width: 1281px) {
+  .modes .grid6 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .todo { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .bosses { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+  .film { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+  .day { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+  .promise { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .codex { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+}
 
 /* ============================================================================================
    Laptop / small desktop (1024-1280): trim outer gutters only
@@ -268,10 +288,6 @@ body { width: 100%; max-width: 1440px; margin: 0 auto; overflow-x: hidden; }
 .band {
   background-image: -webkit-image-set(url("img/art_campfire.webp") 1x);
   background-image: image-set(url("img/art_campfire.webp") type("image/webp") 1x);
-}
-.brand {
-  background-image: -webkit-image-set(url("img/logo_primary.webp") 1x);
-  background-image: image-set(url("img/logo_primary.webp") type("image/webp") 1x);
 }
 .leaves {
   background-image: -webkit-image-set(url("img/leaves.webp") 1x);
