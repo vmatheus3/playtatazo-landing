@@ -83,7 +83,7 @@
 .m-adventure { --mc: #7ED957; } .m-explore { --mc: #4FD8C4; } .m-survival { --mc: #E5B46A; } .m-cozy { --mc: #FFB3D3; } .m-creative { --mc: #7CCDF2; }
 
 /* The sixth type and the mix-your-own note, then the guide link. */
-.mextra { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.mextra { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .mnote { display: flex; gap: 16px; align-items: flex-start; border-radius: 20px; padding: 22px 24px; }
 .mnote .pi { flex: none; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; color: #fff; font-size: 24px; box-shadow: 0 0 0 3px #F6D983, 0 4px 8px rgba(0,0,0,.18); }
 .mnote h3 { font: 700 20px/1.25 var(--serif); }
@@ -96,6 +96,7 @@
    ============================================================================================ */
 @media (max-width: 1180px) {
   .modes .grid6 { grid-template-columns: repeat(2, 1fr); }
+  .mextra { grid-template-columns: 1fr 1fr; }
   .pw-plate { grid-template-columns: 180px 1fr 180px; padding: 32px 30px; gap: 20px; }
   .pw-dev .halo { width: 150px; height: 150px; }
   .pw-dev img { width: 132px; height: 132px; }
