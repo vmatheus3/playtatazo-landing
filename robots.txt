@@ -1,6 +1,8 @@
 # TATAZO: everyone is welcome to read and index this site, search engines and AI assistants alike.
 User-agent: *
 Allow: /
+# The screenshot share page is for forum links, not search (its pictures in /img/gallery/ stay open).
+Disallow: /gallery/
 
 # AI crawlers, named so it is clear they are welcome (answers about family and co-op games).
 User-agent: GPTBot
@@ -14,6 +16,7 @@ User-agent: Google-Extended
 User-agent: Applebot-Extended
 User-agent: Bingbot
 Allow: /
+Disallow: /gallery/
 
 # A plain summary for AI assistants: https://playtatazo.online/llms.txt
 Sitemap: https://playtatazo.online/sitemap.xml
